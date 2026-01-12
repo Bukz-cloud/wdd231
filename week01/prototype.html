@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My portfolio website showcasing web development certificate courses and projects">
+    <meta name="author" content="Olubukade John Adesanmi">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style-large.css">
+    <script src="./scripts/script.js" defer></script>
+    <title>Home - Olubukade John Adesanmi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
+ </head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./images/logo.svg" alt="Logo" class="logo"><span class="name">Olubukade John Adesanmi</span>
+            
+        </div>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        
+        <section class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                I am Olubukade John Adesanmi, I reside in Potchestroom, South Africa.
+                I am a dedicated researcher with a strong passion for learning and innovation. 
+                Currently I am expanding my skill set through a software development course. To achieve this,
+                I combine analytical thinking from my research background with practical problem-solving skills in technology, 
+                reflecting a commitment to continuous growth and adaptability in an increasingly digital world.
+            </div>
+        </section>
+
+        <section class="photo-section">
+            <h2>Student Photo</h2>
+            <div class="student-photo">
+                <div class="photo-me"><img src="./images/profile.jpg" alt="My Photo"></div>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="CSE">CSE</button>
+                <button class="filter-btn" data-filter="WDD">WDD</button>
+            </div>
+            <div class="courses-container">
+                <div class="course-list"></div>
+                <div class="credits-total" id="creditsTotal"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/feed/"><img src="./images/logo-linkedin.jpg" alt="LinkdLn"></a> 
+            <a href="https://github.com/Bukz-cloud"><img src="./images/gitHub-logo.png" alt="GitHub" class="photo"></a> 
+            <a href="https://x.com/"><img src="./images/tweeter-logo.avif" alt="Tweeter" class="photo-tweet"></a> 
+        </div>
+        <p class="footer-info">
+            © <span id="currentYear"></span> • Olubukade John Adesanmi • Potchefstroom, South Africa
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
