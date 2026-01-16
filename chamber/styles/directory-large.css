@@ -1,0 +1,24 @@
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+    }
+
+
+
+
+}
