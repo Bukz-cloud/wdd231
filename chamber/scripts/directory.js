@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Async function to fetch member data
 async function fetchMembers() {
     try {
-        const response = await fetch('members.json');
+        const response = await fetch('data/members.json');
         
         if (!response.ok) {
             throw new Error('Failed to fetch members');
@@ -39,15 +39,20 @@ function displayGridView(members) {
         const memberCard = document.createElement('div');
         memberCard.className = 'member-card';
         memberCard.innerHTML = `
-            <img src="${member.image}" 
-                 alt="${member.name}" 
-                 onerror="this.src='https://via.placeholder.com/400x200?text=No+Image'"
-                 loading="lazy">
-            <h3>${member.name}</h3>
-            <p class="membership-level ${member.membershipLevel.toLowerCase()}">${member.membershipLevel} Member</p>
-            <p class="address">${member.address}</p>
-            <p class="phone">${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
+            <div class="member-card-header">
+                <h3>${member.name}</h3>
+                <p class="tagline">${member.industry || 'Business Tag Line'}</p>
+            </div>
+            <div class="member-card-body">
+                <img src="${member.image}" 
+                     alt="${member.name}" 
+                     onerror="this.src='https://via.placeholder.com/100x100?text=Logo'">
+                <div class="member-card-info">
+                    <p><strong>EMAIL:</strong> ${member.email || 'info@business.com'}</p>
+                    <p><strong>PHONE:</strong> ${member.phone}</p>
+                    <p><strong>URL:</strong> <a href="${member.website}" target="_blank">${member.website.replace('https://', '').replace('http://', '')}</a></p>
+                </div>
+            </div>
         `;
         container.appendChild(memberCard);
     });
@@ -105,3 +110,5 @@ async function init() {
 
 // Run when page loads
 init();
+
+document.getElementById('lastModified').textContent = 'Last Modification: ' + document.lastModified;

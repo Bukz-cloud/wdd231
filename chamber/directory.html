@@ -34,11 +34,49 @@
             </ul>
         </nav>    
     </header>
+    
     <section>
         <div class="hero">
-            <img src="./images/" alt="Hero Image">
+            <img src="./images/hero-image.webp" alt="Hero Image">
         </div>
     </section>
+
+    <section>
+        <div class="container">
+            <!-- Events Section -->
+            <div class="section event-card">
+                <div class="section-header">Events</div>
+                <div class="section-content events-content">
+                    <p>No upcoming events scheduled.</p>
+                </div>
+            </div>
+
+            <!-- Current Weather Section -->
+            <div class="data-card card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 587,041 sq km</li>
+                    <li><strong>Population:</strong> 27,691,018</li>
+                    <li><strong>Capital:</strong> Antananarivo</li>
+                    <li><strong>Languages:</strong> Malagasy, French</li>
+                    <li><strong>Currency:</strong> Malagasy Ariary</li>
+                    <li><strong>Time Zone:</strong> UTC+3</li>
+                    <li><strong>Calling Code:</strong> +261</li>
+                    <li><strong>Internet TLD:</strong> .mg</li>
+                </ul>
+            </div>
+
+            <div class="weather-card card">
+                <h2>Weather <span class="weather-icon"></span></h2>
+                <img src="images/weather-icon.svg" alt="Weather Icon">
+                <p><strong>Temperature:</strong> <span id="temp">10</span>°C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </div>
+        </div>
+    </section>
+    
     <section class="section">
         <div class="controls">
             <button id="gridViewBtn" class="active">Grid View</button>
@@ -51,7 +89,23 @@
     </section>
         
     <footer>
-        <p>©️ Olubukade John Adesanmi 🌍</p> 
+        <div class="footer">
+            <p><strong>Potchefstroom Chamber of Commerce</strong></p>
+            <p>Oakland Bridge Country Estate, 1,</p>
+            <p>64 Witfontein Rd, Heather Park,</p>  
+            <p>George, 6529, Potchefstroom, South Africa.</p> 
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/feed/"><img src="./images/logo-linkedin.jpg" alt="LinkdLn"></a> 
+            <a href="https://github.com/Bukz-cloud"><img src="./images/github-logo.jpg" alt="GitHub" class="photo"></a> 
+            <a href="https://x.com/"><img src="./images/tweeter-logo.avif" alt="Tweeter" class="photo-tweet"></a> 
+        </div>
+        <div class="footer">
+            <p><strong>WDD231 Class Project</strong></p>
+            <p>Olubukade John Adesanmi</p>
+            <p>Potchefstroom Chamber of Commerce</p>  
+            <p id="lastModified"></p>
+        </div>
     </footer>
     
 </body>

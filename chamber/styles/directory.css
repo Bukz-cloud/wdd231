@@ -100,11 +100,64 @@ nav.active {
     width: 100%;
     background-color: #74baf3;
     height: 250px;
+    margin-bottom: 8rem;
 }
 
-.section {
+.container, .container h2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    color: #000;
+    padding: 1.5rem .5rem;
+}
+
+.event-card {
+    flex: 1;
+    border: 1px solid lightgray;
+    margin: 2rem;
+    border-radius: 5%;
+    background-color: rgb(228, 238, 244);
+}
+
+.data-card, .weather-card {
+    flex: 1;
+    border: 1px solid lightgray;
+    margin: 2rem;
+    border-radius: 5%;
+    background-color: rgb(228, 238, 244);
+}
+
+.data-card li, .weather-card p {
+    list-style: none;
+    padding: .5rem 3rem;
+}
+
+.weather-heading::after {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.weather-icon::after {
+    content: "🌤️";
+    margin-left: 8px;
+    font-size: 1.3rem;
+}
+
+.weather-card img {
+    display: none;
+}
+
+
+.weather-card img {
+    width: 5rem;
+    font-size: .5rem;
+    margin: 1rem;
+}
+
+.section, .container {
     width: 100%;
-    padding: 3rem 2rem;
+    padding: 3rem 3rem;
     margin: 0 auto;
 }
 
@@ -127,182 +180,92 @@ nav.active {
     justify-content: center;
 }
 
-.member-card {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    min-height: 400px; /* Reserve minimum height */
-}
-
-.member-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    background-color: #e0e0e0;
-    display: block;
-}
-
-/* Optional: Add a subtle loading animation */
-.member-card.loading {
-    opacity: 0.6;
-}
-
-.controls button {
-    padding: 0.75rem 1.5rem;
-    border: 2px solid #2c3e50;
-    background-color: white;
-    color: #2c3e50;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.controls button.active {
-    background-color: #2c3e50;
-    color: white;
-}
-
-.controls button:hover {
-    background-color: #34495e;
-    color: white;
-}
-
-/* Grid View Styles */
 .grid-view {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1rem 3rem;
 }
 
 .member-card {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: #d9d9d9;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     transition: transform 0.3s;
+    overflow: hidden;
 }
 
 .member-card:hover {
     transform: translateY(-5px);
 }
 
-.member-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+.member-card-header {
+    background: #d9d9d9;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #b8b8b8;
 }
 
-.member-card h3 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-}
-
-.membership-level {
+.member-card-header h3 {
+    color: #2c2c2c;
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 0.25rem 0.5rem;
-    border-radius: 3px;
-    display: inline-block;
-    margin-bottom: 1rem;
 }
 
-.membership-level.platinum {
-    background-color: #e5e4e2;
-    color: #333;
+.member-card-header .tagline {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 0;
 }
 
-.membership-level.gold {
-    background-color: #ffd700;
-    color: #333;
-}
-
-.membership-level.silver {
-    background-color: #c0c0c0;
-    color: #333;
-}
-
-.membership-level.bronze {
-    background-color: #cd7f32;
-    color: white;
-}
-
-.member-card .address,
-.member-card .phone {
-    color: #666;
-    margin-bottom: 0.5rem;
-}
-
-.member-card a {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #3498db;
-    text-decoration: none;
-}
-
-.member-card a:hover {
-    text-decoration: underline;
-}
-
-/* List View Styles */
-.list-view {
+.member-card-body {
     display: flex;
-    flex-direction: column;
+    background: white;
+    padding: 1.5rem;
     gap: 1rem;
 }
 
-.member-row {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+.member-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background-color: #e0e0e0;
+    border: 2px solid #999;
+    flex-shrink: 0;
 }
 
-.member-row h3 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
+.member-card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
 }
 
-.member-contact {
-    text-align: right;
+.member-card-info p {
+    margin: 0;
+    color: #333;
 }
 
-.member-contact p {
-    color: #666;
-    margin-bottom: 0.5rem;
+.member-card-info strong {
+    color: #000;
+    font-weight: bold;
 }
 
-.member-contact a {
-    color: #3498db;
+.member-card-info a {
+    color: #333;
     text-decoration: none;
 }
 
-.member-contact a:hover {
+.member-card-info a:hover {
+    color: #3498db;
     text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .grid-view {
-        grid-template-columns: 1fr;
-    }
-    
-    .member-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .member-contact {
-        text-align: left;
-    }
+.membership-level {
+    display: none; /* Hide in this layout or place it differently */
 }
 
 footer {
@@ -311,7 +274,54 @@ footer {
     animation: gradient-animation 18s ease infinite;
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.5;
     margin: 0 auto; 
     padding: 2rem 3rem;
     text-align: center;
+}
+
+.footer {
+    text-align: left;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 2rem .2rem;
+}
+
+.social-links a {
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: lightpink;
+    transform: scale(1.1);
+}
+
+.photo {
+    width: 65px;
+    height: auto;
+    }
+
+.photo-tweet {
+    width: 50px;
+    }
+
+.footer-info {
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+#lastModified {
+    font-size: 0.9rem;
+    color: #000;
 }

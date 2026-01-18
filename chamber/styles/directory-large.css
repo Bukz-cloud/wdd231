@@ -18,7 +18,101 @@
         padding: 0;
     }
 
+    .hero {
+        width: 100%;
+        height: 350px;
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+    }
 
+    .hero img {
+        width: 100%;
+        height: 350px;
+        margin-bottom: 5rem;
+    }
 
+    .container, .container h2 {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        text-align: left;
+        color: #000;
+    }
+
+    .event-card {
+        flex: 2;
+        border: 1px solid lightgray;
+        margin: 2rem;
+        border-radius: 5%;
+        background-color: rgb(214, 235, 247);
+    }
+
+    .data-card, .weather-card {
+        flex: 1;
+        border: 1px solid lightgray;
+        margin: 2rem;
+        border-radius: 5%;
+        background-color: rgb(214, 235, 247);
+    }
+
+    .data-card li, .weather-card p {
+        list-style: none;
+        padding: 0.3rem 3rem;
+    }
+
+    .weather-heading::after {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .weather-icon::after {
+        content: "🌤️";
+        margin-left: 8px;
+        font-size: 1.3rem;
+    }
+
+    .weather-card img {
+        display: none;
+    }
+
+    footer {
+    background: linear-gradient(90deg, #b0219d, #ee85b0, #74baf3);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.5;
+    margin: 0 auto; 
+    padding: 2rem 3rem;
+    text-align: center;
+    }
+
+    .container, .container h2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: left;
+    color: #000;
+    }
+
+    .event-card {
+        flex: 2;
+        border: 1px solid lightgray;
+        margin: 2rem;
+        border-radius: 5%;
+        background-color: rgb(228, 238, 244);
+    }
+
+    .data-card, .weather-card {
+        flex: 1;
+        border: 1px solid lightgray;
+        margin: 2rem;
+        border-radius: 5%;
+        background-color: rgb(228, 238, 244);
+    }
 
 }
