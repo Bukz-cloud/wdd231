@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "North West Painting contractors",
+    "address": "227 Beyers Naude street, 2520, Potchefstroom, North West, South Africa",
+    "phone": "0710651815",
+    "website": "https://www.yellosa.co.za/company/675205/north-west-painting-contractors",
+    "membershipLevel": "Gold",
+    "industry": "Design",
+    "image": "https://www.yellosa.co.za/img/za/h/_1472477154_25544.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Potchefstroom Dam Resort",
+    "address": "67 Retief Street, Potchefstroom, North West, South Africa",
+    "phone": "018 293 0369",
+    "website": "https://www.yellosa.co.za/company/901120/potchefstroom-dam-resort",
+    "membershipLevel": "Silver",
+    "industry": "Services",
+    "image":"https://www.yellosa.co.za/img/za/b/_1484835702_17647.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Downtown Bakery & CafeProtea Coin Security Group, Potchestroom",
+    "address": "67 Retief Street, Potchefstroom, North West, South Africa",
+    "phone": "018 293 0369",
+    "website": "www.proteacoin.co.za",
+    "membershipLevel": "Bronze",
+    "industry": "Services",
+    "image": "https://www.yellosa.co.za/img/za/e/_1528279224-23-protea-coin-security-group-potchestroom.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Dara Media & Marketing",
+    "address": "Oakland Bridge Country Estate, 1, 64 Witfontein Rd, Heather Park, George, 6529, Potchefstroom, South Africa",
+    "phone": "+27 64 681 3706",
+    "website": "www.daramarketing.co.za",
+    "membershipLevel": "Gold",
+    "industry": "Finance",
+    "image": "https://www.yellosa.co.za/img/za/h/_1695828055-87-dara-media-marketing.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Linde Engineering",
+    "address": "4 Elsenbroek St, Potchindustria, Potchefstroom, 2520, North West, South Africa",
+    "phone": "+27 84 998 9846",
+    "website": "https://brightmindslearning.com",
+    "membershipLevel": "Silver",
+    "industry": "Education",
+    "image": "https://www.yellosa.co.za/img/za/r/_1702294899-91-linde-engineering.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Matrix Warehouse Potchefstroom",
+    "address": "Shop 18 Canal Crossing Mall, C/O Parys Avenue and Nelson Mandela Drive, Grimbeek Park, 2531, Potchefstroom, North West, South Africa",
+    "phone": "018 290 5236",
+    "website": "www.matrixwarehouse.co.za",
+    "membershipLevel": "Gold",
+    "industry": "Services",
+    "image": "https://www.yellosa.co.za/img/za/k/_1424420670-78-matrix-warehouse-potchefstroom.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Sim Mining Consultants (pty) Ltd.",
+    "address": "PO BOX 11151, Riverwalk 2538, Potchefstroom, North West, South Africa",
+    "phone": "(018)-294-7222",
+    "website": "www.sim.co.za",
+    "membershipLevel": "Platinum",
+    "industry": "Mining",
+    "image": "https://www.yellosa.co.za/img/za/b/_1484835702_17647.jpg"    
+  }
+]
