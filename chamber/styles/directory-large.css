@@ -76,7 +76,7 @@
     }
 
     footer {
-    background: linear-gradient(90deg, #b0219d, #ee85b0, #74baf3);
+    background: linear-gradient(90deg, #f668e3, #ee85b0, #74baf3);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
     width: 100%;
@@ -100,7 +100,7 @@
     }
 
     .event-card {
-        flex: 2;
+        flex: 1;
         border: 1px solid lightgray;
         margin: 2rem;
         border-radius: 5%;
