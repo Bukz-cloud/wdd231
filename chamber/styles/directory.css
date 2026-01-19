@@ -100,9 +100,9 @@ nav.active {
 
 .hero {
     width: 100%;
-    background-color: #74baf3;
     height: 250px;
-    margin-bottom: 8rem;
+    padding-bottom: 3rem;
+    margin-bottom: 15rem;
 }
 
 .container, .container h2 {
@@ -120,6 +120,7 @@ nav.active {
     margin: 2rem;
     border-radius: 5%;
     background-color: rgb(228, 238, 244);
+    padding: 2rem;
 }
 
 .data-card, .weather-card {
@@ -158,7 +159,7 @@ nav.active {
     margin: 1rem;
 }
 
-.section, .container {
+.container {
     width: 100%;
     padding: 3rem 3rem;
     margin: 0 auto;
@@ -282,11 +283,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: left;
     line-height: 1.5;
     margin: 0 auto; 
     padding: 2rem 3rem;
     text-align: center;
+    margin-top: 3rem;
 }
 
 .footer {
@@ -295,7 +297,7 @@ footer {
 
 .social-links {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: start;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
