@@ -71,10 +71,6 @@
         font-size: 1.3rem;
     }
 
-    .weather-card img {
-        display: none;
-    }
-
     footer {
     background: linear-gradient(90deg, #f668e3, #ee85b0, #74baf3);
     background-size: 180% 180%;
