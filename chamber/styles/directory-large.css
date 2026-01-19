@@ -102,13 +102,4 @@
         border-radius: 5%;
         background-color: rgb(228, 238, 244);
     }
-
-    .data-card, .weather-card {
-        flex: 1;
-        border: 1px solid lightgray;
-        margin: 2rem;
-        border-radius: 5%;
-        background-color: rgb(228, 238, 244);
-    }
-
 }
