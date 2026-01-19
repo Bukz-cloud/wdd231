@@ -149,14 +149,10 @@ nav.active {
 }
 
 .weather-card img {
-    display: none;
-}
-
-
-.weather-card img {
     width: 5rem;
     font-size: .5rem;
     margin: 1rem;
+    display: none;
 }
 
 .container {
@@ -283,16 +279,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: left;
+    align-items: flex-start;
     line-height: 1.5;
     margin: 0 auto; 
     padding: 2rem 3rem;
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.footer {
     text-align: left;
+    margin-top: 3rem;
 }
 
 .social-links {
