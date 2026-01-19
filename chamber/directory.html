@@ -35,58 +35,61 @@
         </nav>    
     </header>
     
-    <section>
-        <div class="hero">
-            <img src="./images/hero-image.webp" alt="Hero Image">
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <!-- Events Section -->
-            <div class="section event-card">
-                <div class="section-header">Events</div>
-                <div class="section-content events-content">
-                    <p>No upcoming events scheduled.</p>
+    <main>
+        <h1>Potchefstroom Chamber of Commerce</h1>
+        <section>
+            <div class="hero">
+                <img src="./images/hero-image.webp" alt="Hero Image">
+            </div>
+        </section>
+    
+        <section>
+            <div class="container">
+                <!-- Events Section -->
+                <div class="section event-card">
+                    <div class="section-header">Events</div>
+                    <div class="section-content events-content">
+                        <p>No upcoming events scheduled.</p>
+                    </div>
+                </div>
+    
+                <!-- Current Weather Section -->
+                <div class="data-card card">
+                    <h2>Data</h2>
+                    <ul>
+                        <li><strong>Area:</strong> 2,573 sq km</li>
+                        <li><strong>Population:</strong> 210,000</li>
+                        <li><strong>Province:</strong> North-West</li>
+                        <li><strong>Languages:</strong> Afrikaan, English</li>
+                        <li><strong>Time Zone:</strong> GMT+2</li>
+                        <li><strong>Calling Code:</strong> +27</li>
+                        <li><strong>Internet TLD:</strong> .mg</li>
+                    </ul>
+                </div>
+    
+                <div class="weather-card card">
+                    <h2>Weather <span class="weather-icon"></span></h2>
+                    <img src="images/weather-icon.svg" alt="Weather Icon">
+                    <p><strong>Temperature:</strong> <span id="temp">10</span>°C</p>
+                    <p><strong>Conditions:</strong> Partly Cloudy</p>
+                    <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
                 </div>
             </div>
-
-            <!-- Current Weather Section -->
-            <div class="data-card card">
-                <h2>Data</h2>
-                <ul>
-                    <li><strong>Area:</strong> 587,041 sq km</li>
-                    <li><strong>Population:</strong> 27,691,018</li>
-                    <li><strong>Capital:</strong> Antananarivo</li>
-                    <li><strong>Languages:</strong> Malagasy, French</li>
-                    <li><strong>Currency:</strong> Malagasy Ariary</li>
-                    <li><strong>Time Zone:</strong> UTC+3</li>
-                    <li><strong>Calling Code:</strong> +261</li>
-                    <li><strong>Internet TLD:</strong> .mg</li>
-                </ul>
-            </div>
-
-            <div class="weather-card card">
-                <h2>Weather <span class="weather-icon"></span></h2>
-                <img src="images/weather-icon.svg" alt="Weather Icon">
-                <p><strong>Temperature:</strong> <span id="temp">10</span>°C</p>
-                <p><strong>Conditions:</strong> Partly Cloudy</p>
-                <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
-                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section">
-        <div class="controls">
-            <button id="gridViewBtn" class="active">Grid View</button>
-            <button id="listViewBtn">List View</button>
-        </div>
+        </section>
         
-        <div id="membersContainer" class="grid-view">
-            <!-- Members will be dynamically loaded here -->
-        </div>
-    </section>
+        <section class="section">
+            <div class="controls">
+                <button id="gridViewBtn" class="active">Grid View</button>
+                <button id="listViewBtn">List View</button>
+            </div>
+            
+            <div id="membersContainer" class="grid-view">
+                <!-- Members will be dynamically loaded here -->
+            </div>
+        </section>
+
+    </main>
         
     <footer>
         <div class="footer">
