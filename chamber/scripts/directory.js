@@ -42,6 +42,7 @@ function displayGridView(members) {
             <div class="member-card-header">
                 <h3>${member.name}</h3>
                 <p class="tagline">${member.industry || 'Business Tag Line'}</p>
+                <span class="membership-badge ${member.membershipLevel.toLowerCase()}">${member.membershipLevel} Member</span>
             </div>
             <div class="member-card-body">
                 <img src="${member.image}" 
@@ -110,6 +111,8 @@ async function init() {
 
 // Run when page loads
 init();
+
+
 
 const currentTemp = document.querySelector("#current-temp");
 const icon = document.querySelector("#weather-icon");

@@ -300,7 +300,7 @@ nav.active {
 }
 
 .membership-level {
-    display: none; /* Hide in this layout or place it differently */
+    display: none; 
 }
 
 footer {
