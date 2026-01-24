@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory - Potchefstroom Chamber of Commerce</title>
-    <meta name="description" content="Welcome to the chamber of commerce website directory, where you can get information about the chains of industries in our community.">
+    <title>Potchefstroom Chamber Home Page</title>
+    <meta name="description" content="Welcome to the chamber of commerce website homepage, where you can get information about the chains of industries in our community.">
     <meta name="author" content="Olubukade John Adesanmi">
     <link rel="stylesheet" href="./styles/directory.css">
     <link rel="stylesheet" href="./styles/directory-large.css">
-    <script src="./scripts/directory.js" defer></script>
+    <script src="./scripts/homepage.js" defer></script>
     <link rel="icon" href="./images/favicon-two.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +27,8 @@
         <button class="hamburger" aria-label="Toggle menu">☰</button>
         <nav class="nav-bar">
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#" class="active">Directory</a></li>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
@@ -36,7 +36,7 @@
     </header>
     
     <main>
-        <h1>Potchefstroom Chamber of Commerce</h1>
+        <h1>Welcome to Potchefstroom Chamber of Commerce Home</h1>
         <section>
             <div class="hero">
                 <img src="./images/hero-image.webp" alt="Hero Image">
@@ -79,18 +79,9 @@
         </section>
         
         <section class="section">
-            <h2 class="home-company">Visit Our Companies</h2>
-            <div class="controls">
-                <button id="gridViewBtn" class="active">Grid View</button>
-                <button id="listViewBtn">List View</button>
-            </div>
-            
+            <h2 class="home-company">Visit Our Companies</h2>           
             <div id="membersContainer" class="grid-view">
                 <!-- Members will be dynamically loaded here -->
-            </div>
-
-            <div id="membersContainer" class="list-view">
-                <!-- Members displayed here -->
             </div>
         </section>
 

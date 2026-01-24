@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     hamburger.addEventListener('click', function() {
         nav.classList.toggle('active');
-    });
+    })
 
     document.addEventListener('click', function(event) {
         if(!nav.contains(event.target) && !hamburger.contains(event.target)) {
@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// random-members.js - Displays 3 random members from members.json
 
 // Async function to fetch member data
 async function fetchMembers() {
@@ -30,7 +32,6 @@ async function fetchMembers() {
     }
 }
 
-// Function to display members in grid view
 function displayGridView(members) {
     const container = document.getElementById('membersContainer');
     container.innerHTML = '';
@@ -58,6 +59,22 @@ function displayGridView(members) {
     });
 }
 
+
+// Function to get random members from array
+function getRandomMembers(membersArray, count) {
+    // Create a copy of the array to avoid modifying original
+    const shuffled = [...membersArray];
+    
+    // Fisher-Yates shuffle algorithm
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    
+    // Return only the requested count
+    return shuffled.slice(0, count);
+}
+
 // Function to display members in list view
 function displayListView(members) {
     const container = document.getElementById('membersContainer');
@@ -81,12 +98,16 @@ function displayListView(members) {
     });
 }
 
-// Initialize the page
+// Initialize the page with 3 random members
 async function init() {
-    const members = await fetchMembers();
+    // Fetch all members
+    const allMembers = await fetchMembers();
+    
+    // Get 3 random members
+    const randomMembers = getRandomMembers(allMembers, 3);
     
     // Display initial grid view
-    displayGridView(members);
+    displayGridView(randomMembers);
     
     // Set up view toggle buttons
     const gridViewBtn = document.getElementById('gridViewBtn');
@@ -97,14 +118,14 @@ async function init() {
         container.className = 'grid-view';
         gridViewBtn.classList.add('active');
         listViewBtn.classList.remove('active');
-        displayGridView(members);
+        displayGridView(randomMembers);
     });
     
     listViewBtn.addEventListener('click', () => {
         container.className = 'list-view';
         listViewBtn.classList.add('active');
         gridViewBtn.classList.remove('active');
-        displayListView(members);
+        displayListView(randomMembers);
     });
 }
 

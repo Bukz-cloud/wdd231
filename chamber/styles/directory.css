@@ -99,13 +99,34 @@ nav.active {
 }
 
 .hero {
+    position: relative;
     width: 100%;
     height: 250px;
     padding-bottom: 3rem;
     margin-bottom: 15rem;
 }
 
-.container, .container h2 {
+
+.hero button {
+    position: absolute;
+    bottom: -180px;
+    right: 20px;
+    background: navajowhite;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    padding:.5rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.container {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -114,45 +135,36 @@ nav.active {
     padding: 1.5rem .5rem;
 }
 
+.container h2 {
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
 .event-card {
     flex: 1;
     border: 1px solid lightgray;
     margin: 2rem;
     border-radius: 5%;
-    background-color: rgb(228, 238, 244);
-    padding: 2rem;
+    background-color: rgb(204, 201, 204);
+    padding-bottom: 10px;
 }
 
 .data-card, .weather-card {
     flex: 1;
     border: 1px solid lightgray;
     margin: 2rem;
-    border-radius: 5%;
-    background-color: rgb(228, 238, 244);
+    border-radius: 5px;
+    background-color: rgb(204, 201, 204);
+    padding-bottom: 10px;
 }
 
 .data-card li, .weather-card p {
     list-style: none;
     padding: .5rem 3rem;
     text-align: left;
-}
-
-.weather-heading::after {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.weather-icon::after {
-    content: "🌤️";
-    margin-left: 8px;
-    font-size: 1.3rem;
-}
-
-.weather-card img {
-    width: 5rem;
-    font-size: .5rem;
-    margin: 1rem;
-    display: none;
 }
 
 .container {
@@ -163,7 +175,7 @@ nav.active {
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -180,13 +192,38 @@ nav.active {
     justify-content: center;
 }
 
+.home-company {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .grid-view {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
     margin: 0 auto;
-    max-width: min(100%, 800px);
+    max-width: min(100%, 1000px);
     padding: 0 1rem;
+}
+
+
+
+.member-row {
+    background: #d9d9d9;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 65%;
 }
 
 .member-card {

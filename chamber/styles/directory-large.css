@@ -31,16 +31,27 @@
         margin-bottom: 5rem;
     }
 
-    .container, .container h2 {
+    .home-company {
+        width: 65%;
+    }
+
+    .container {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-        text-align: left;
-        color: #000;
     }
 
     .event-card {
-        flex: 2;
+        flex: 1;
+    }
+
+    .weather-card {
+        flex: 1;
+    }
+
+    .hero button {
+        position: absolute;
+        bottom: 10px;
     }
 
     footer {
@@ -54,5 +65,6 @@
     margin: 0 auto; 
     padding: 2rem 3rem;
     text-align: left;
+    margin-top: 3rem;
     }
 }

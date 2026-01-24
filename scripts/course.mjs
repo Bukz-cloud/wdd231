@@ -30,7 +30,7 @@ const byuiCourse = {
         this.sections[sectionIndex].enrolled--;
       }
       
-    }
+    };
   },
 };
 
