@@ -107,11 +107,13 @@ nav.active {
 }
 
 
-.hero button {
+.join {
     position: absolute;
     bottom: -180px;
     right: 20px;
     background: navajowhite;
+    text-decoration: none;
+    color: #000;
     font-size: 1rem;
     font-weight: bold;
     padding:.5rem 2rem;
@@ -120,14 +122,9 @@ nav.active {
     cursor: pointer;
 }
 
-.hero button:hover {
+.join:hover {
     background-color: #f76a6a;
     transition: all 0.3s ease;
-}
-
-.join {
-    text-decoration: none;
-    color: #000;
 }
 
 .container {
