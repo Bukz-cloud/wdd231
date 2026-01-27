@@ -192,10 +192,15 @@ nav.active {
     justify-content: center;
 }
 
+section {
+    width: 100%;
+    height: auto;
+}
+
 .home-company {
     background-color: #000;
     color: #fff;
-    width: 100%;
+    min-width: 100%;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 2rem;
