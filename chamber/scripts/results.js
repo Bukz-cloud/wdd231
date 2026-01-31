@@ -28,7 +28,7 @@ console.log(myInfo.get('message'));
 
 document.getElementById('results').innerHTML = `
 <p>Membership form for ${myInfo.get('first')}  ${myInfo.get('last')} with the ${myInfo.get('title')} title</p>
-<p>Proxy ${myInfo.get('organization')} on ${myInfo.get('timestamp')} in the ${myInfo.get('province')} South Africa</p>
+<p>Your organization name is ${myInfo.get('organization')} on ${myInfo.get('timestamp')} in the ${myInfo.get('province')} South Africa</p>
 <p>Your Phone: ${myInfo.get('phone')}</p>
 <p>Your email is ${myInfo.get('email')}</p>
 <p>Your physical address is ${myInfo.get('physicalAddress')}</p>
