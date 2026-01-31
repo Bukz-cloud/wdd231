@@ -513,40 +513,51 @@ input[type="checkbox"] {
 
 form {
     margin: 1rem 2%;
-
-    label {
-        display: block;
-        font-size: 1rem;
-        color: purple;
-        padding-top: 1.2rem;
-    }
-    .h3-form {
-        font-size: 1rem;
-        color: #000;
-        margin: 1.5rem 0 .2rem 0;
-        border-bottom: 1px solid #eee;
-    }
-
-    input:required {border-left-color: #d70000;}
-    input:focus {border-left-color: black; outline:none;}
-    input:required:valid{border-left-color: green;}
-
-    .submit {
-        border: none;
-        text-align: center;
-        background-color: #3D405B;
-        color: white;
-        border-radius: .5rem;
-        padding: .75rem 1.5rem;
-        margin: 2rem 0;
-        font-size: 1.2rem;
-        cursor: pointer;
-    }
-
-    .submit:hover {
-        background-color: #74baf3;
-    }
 }
+
+form label {
+    display: block;
+    font-size: 1rem;
+    color: purple;
+    padding-top: 1.2rem;
+}
+
+form .h3-form {
+    font-size: 1rem;
+    color: #000;
+    margin: 1.5rem 0 .2rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+form input:required {
+    border-left-color: #d70000;
+}
+
+form input:focus {
+    border-left-color: black;
+    outline: none;
+}
+
+form input:required:valid {
+    border-left-color: green;
+}
+
+form .submit {
+    border: none;
+    text-align: center;
+    background-color: #3D405B;
+    color: white;
+    border-radius: .5rem;
+    padding: .75rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+form .submit:hover {
+    background-color: #74baf3;
+}
+
 input:-webkit-autofill{
     -webkit-text-fill-color: #3D405B;
 }
