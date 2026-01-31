@@ -65,9 +65,9 @@
                     <label for="last">Last Name</label>
                     <input type="text" name="last" id="last" required autocomplete="family-name" title="Your Last Name">
                     <label for="title">Organizational title</label>
-                    <input type="text" name="title" id="title" required autocomplete="organization-title" title="Your organization title" pattern="[A-Za-z\s\-]{2,50}">
+                    <input type="text" name="title" id="title" required autocomplete="organization-title" title="Your organization title" pattern="[A-Za-z\s\-]{7,}">
                     <label for="organization">Name of Organization</label>
-                    <input type="text" name="organization" id="organization" pattern="" autocomplete="organization">
+                    <input type="text" name="organization" id="organization" title="Enter your organization name" autocomplete="organization" required>
                     <label for="acronym">Acronyms</label>
                     <input type="text" name="acronym" id="acronym">
                     <label for="physicalAddress">Physical Address</label>
@@ -75,7 +75,7 @@
                     <label for="postalAddress">Postal Address</label>
                     <input type="text" name="postalAddress" id="postalAddress">
                     <label for="phone">Phone</label>
-                    <input type="tel" name="phone" id="phone" placeholder="987-555-1234" autocomplete="tel" title="A Phone Number with dashes">
+                    <input type="tel" name="phone" id="phone" placeholder="987-555-1234" autocomplete="tel" title="A Phone Number with dashes" required>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="john89@gmail.com" autocomplete="email" title="Your email" required>
                     <label for="website">Website</label>
@@ -121,8 +121,8 @@
                         <textarea rows="5" cols="30" id="description" name="message" title="Describe your organization's mission, services, and goals" placeholder="Enter your text here..." required></textarea> 
                     </label>
 
-                    <label>Please confirm you are human by typing in YES. (Please note, this is case sensitive)*</label>
-                    <input type="text">
+                    <label for="human">Please confirm you are human by typing in YES. (Please note, this is case sensitive)*</label>
+                    <input type="text" name="human" id="human">
 
                     <label for="membership">
                         Membership Level:
