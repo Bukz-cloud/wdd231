@@ -56,7 +56,7 @@
                 <p>If you are situated in South Africa, please let us have your association’s details. We also list councils, trade unions, societies, institutions, federations and clubs!</p>
                 <p>Please note that no commercial enterprises will be listed.</p>
                 <p>Submit your organisation</p>
-                <p>Fields marked with an * are required</p> <hr/> 
+                <p>Fields marked with an * are required</p> <hr> 
 
                 <form method="GET" action="thankyou.html" class="chamber-form">
                 
@@ -124,14 +124,16 @@
                     <label>Please confirm you are human by typing in YES. (Please note, this is case sensitive)*</label>
                     <input type="text">
 
-                    <label for="membership">Membership Level</label>
-                    <select id="membership" name="membership" required>
-                        <option value="" placeholder="select.."></option>
-                        <option value="np">np</option>
-                        <option value="gold">gold</option>
-                        <option value="silver">silver</option>
-                        <option value="bronze">bronze</option>
-                    </select>
+                    <label for="membership">
+                        Membership Level:
+                        <select id="membership" name="membership" required>
+                            <option value="" disable selected>Select...</option>
+                            <option value="np">np</option>
+                            <option value="gold">gold</option>
+                            <option value="silver">silver</option>
+                            <option value="bronze">bronze</option>
+                        </select>
+                    </label>
 
                     
                     <input type="hidden" name="timestamp" id="timestamp">
