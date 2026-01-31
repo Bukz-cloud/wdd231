@@ -263,23 +263,23 @@ nav.active {
 
 .card.gold {
    background: linear-gradient(135deg, #d4af37, #b8962e); 
-   animation: slideUp 0.6s ease-out;
+   animation: slideUp 0.6s ease-out 0.3s backwards; 
 }
 
 .card.silver {
    background: linear-gradient(135deg, #cfcfcf, #a8a8a8); 
-   animation: slideUp 0.6s ease-out;
+   animation: slideUp 0.6s ease-out 0.3s backwards; 
 }
 
 .card.bronze {
     background: linear-gradient(135deg, #864606, #a56428);
     color: #ffffff;
-    animation: slideUp 0.6s ease-out;
+    animation: slideUp 0.6s ease-out 0.3s backwards; 
 }
 
 .card.non-profit {
     background: #86b8f5;
-    animation: slideUp 0.6s ease-out;
+    animation: slideUp 0.6s ease-out 0.3s backwards; 
 }
 
 @keyframes slideUp {
