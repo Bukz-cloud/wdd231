@@ -5,3 +5,4 @@ modal.showModal();
 closeModal.addEventListener("click", () => {
     modal.close();
 });
+

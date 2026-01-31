@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .card button {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 300px;
+            position: relative;
+        }
+
+        #closeModal {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+  <main>
+    <section id="card-container"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script>
+    const cards = [
+  {
+    title: "Card One",
+    summary: "Short description",
+    details: "More information about Card One."
+  },
+  {
+    title: "Card Two",
+    summary: "Short description",
+    details: "More information about Card Two."
+  },
+  {
+    title: "Card Three",
+    summary: "Short description",
+    details: "More information about Card Three."
+  },
+  {
+    title: "Card Four",
+    summary: "Short description",
+    details: "More information about Card Four."
+  }
+];
+const container = document.getElementById("card-container");
+
+cards.forEach((card, index) => {
+  // 1. Create card div
+  const cardDiv = document.createElement("div");
+  cardDiv.classList.add("card");
+
+  // 2. Create title
+  const h3 = document.createElement("h3");
+  h3.textContent = card.title;
+
+  // 3. Create summary text
+  const p = document.createElement("p");
+  p.textContent = card.summary;
+
+  // 4. Create button
+  const btn = document.createElement("button");
+  btn.textContent = "More Info";
+
+  // 5. Button click opens modal
+  btn.addEventListener("click", () => {
+    openModal(card);
+  });
+
+  // 6. Assemble card
+  cardDiv.append(h3, p, btn);
+  container.appendChild(cardDiv);
+});
+
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
+const closeModal = document.getElementById("closeModal");
+
+function openModal(card) {
+  modalTitle.textContent = card.title;
+  modalText.textContent = card.details;
+  modal.classList.remove("hidden");
+}
+
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
+
+
+  </script>
+</body>

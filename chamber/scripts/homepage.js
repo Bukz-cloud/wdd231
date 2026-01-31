@@ -190,6 +190,68 @@ function displayForecast(data) {
     day3.textContent = `${data.list[24].main.temp} °C`;
 }
 
-
-
 document.getElementById('lastModified').textContent = 'Last Modification: ' + document.lastModified;
+
+const cards = [
+    {
+        title: "Gold Membership",
+        summary: "Premium business support and full access to exclusive chamber benefits",
+        details: "Gold members receive priority visibility in all chamber communications, featured placement on the website and in member directories, and free attendance to all chamber events (including workshops, mixers, and the annual gala). This level also includes strategic business support, such as networking matchmaking, annual business consultation, and invitations to exclusive leadership roundtables. Gold membership is perfect for organizations seeking maximum community engagement and recognition.",
+        level: "gold"
+    },
+    {
+        title: "SIlver Membership",
+        summary: "Enhanced access to chamber events and promotional opportunities.",
+        details: "Silver members enjoy complimentary access to select chamber networking events and discounted rates for premium events and programs. They receive promotion on social media, their logo on the chamber’s member page, and opportunities to participate in committee projects. Silver membership offers a balanced mix of visibility and value — ideal for growing businesses that want strong community involvement without full premium sponsorship.",
+        level: "silver"
+    },
+    {
+        title: "Bronze Membership",
+        summary: "Essential benefits to connect with the local business community.",
+        details: "Bronze members gain access to the core benefits of chamber membership, including invitation to community networking events, inclusion in the online member directory, and access to select business resources and newsletters. This entry-level membership is designed for small businesses and startups looking to build connections, stay informed, and begin engaging with local partners and customers.",
+        level: "bronze"
+    },
+    {
+        title: "NM Membership",
+        summary: "NP membership is for non profit organizations and there is no fee (np)",
+        details: "NP members receive basic chamber benefits, including access to networking events, regular newsletters, and updates on local business opportunities, advocacy efforts, and training programs. Members are listed in the chamber’s online directory and may attend events at member-only or discounted rates. This membership level is ideal for individuals, startups, and small organizations seeking to stay informed, build relationships, and gradually engage with the local business ecosystem.",
+        level: "non-profit"
+    }
+];
+
+const memberLevel = document.querySelector("#member-level");
+
+const modal = document.querySelector("#modal");
+const modalTitle = document.querySelector("#modalTitle");
+const modalText = document.querySelector("#modalText");
+const closeModal = document.querySelector("#closeModal");
+
+
+cards.forEach((card) => {
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card", card.level);
+
+    const h3 = document.createElement("h3");
+    h3.textContent = card.title;
+
+    const p = document.createElement("p");
+    p.textContent = card.summary;
+
+    const btnCard = document.createElement("button");
+    btnCard.textContent = "More Info";
+
+    btnCard.addEventListener("click", () => {
+        modalTitle.textContent = card.title;
+        modalText.textContent = card.details;
+        modal.showModal();
+    });
+
+    cardDiv.append(h3, p, btnCard);
+    memberLevel.appendChild(cardDiv);
+});
+
+closeModal.addEventListener("click", () => {
+    modal.close();
+});
+
+

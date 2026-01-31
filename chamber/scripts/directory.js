@@ -171,6 +171,4 @@ function displayForecast(data) {
     day3.textContent = `${data.list[24].main.temp} °C`;
 }
 
-
-
 document.getElementById('lastModified').textContent = 'Last Modification: ' + document.lastModified;

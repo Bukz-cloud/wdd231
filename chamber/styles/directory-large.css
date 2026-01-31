@@ -18,19 +18,7 @@
         padding: 0;
     }
 
-    .hero {
-        width: 100%;
-        height: 350px;
-        padding-bottom: 2rem;
-        margin-bottom: 3rem;
-    }
-
-    .hero img {
-        width: 100%;
-        height: 350px;
-        margin-bottom: 5rem;
-    }
-
+    
     .home-company {
         width: 65%;
     }
@@ -49,21 +37,47 @@
         flex: 1;
     }
 
-    .join {
-        bottom: 10px;
+    footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        line-height: 1.5;
+        margin: 0 auto; 
+        padding: 2rem 3rem;
+        text-align: left;
+        margin-top: auto;
     }
 
-    footer {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    line-height: 1.5;
-    margin: 0 auto; 
-    padding: 2rem 3rem;
-    text-align: left;
-    margin-top: 3rem;
+    .card-form {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+
+    .form-class {
+        max-width: 900px;      /* controls width on large screens */
+        margin: 2rem auto;     /* centers horizontally */
+        padding: 2rem;
+        border: 1px solid #555;
+        flex: 2.5;
+    }
+
+    .card-class {
+        flex: 0.3;
+        margin: 2rem auto;     /* centers horizontally */
+        padding: 2rem;
+        border: 1px solid #555;
+        border-radius: 5px;
+    }
+
+    #member-level {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
     }
 }

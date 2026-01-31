@@ -99,6 +99,10 @@
                     const courseCard = document.createElement('div');
                     courseCard.className = `course-card ${course.completed ? 'completed' : ''}`;
                     courseCard.textContent = `${course.subject} ${course.number}`;
+
+                    courseCard.addEventListener('click', () => {
+                        displayCourseDetails(course);
+                    });
                     courseList.appendChild(courseCard);
                 });
 
@@ -107,36 +111,57 @@
                 document.getElementById('creditsTotal').textContent = `Total credits for displayed courses: ${totalCredits}`;
             }
 
-            // Filter button functionality
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const filter = this.dataset.filter;
-                    displayCourses(filter);
-                });
-            });
+            const courseDetails = document.querySelector('#course-details');
 
-            // Initial display
-            displayCourses('all');
-        });
-
-const modal = document.querySelector("#courseDialog");
-function displayCourseDialog(course) {
-    modal.innerHTML = '';
-    modal.innerHTML = `
+// Function to display course details in modal
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
         <button id="closeModal">❌</button>
         <h2>${course.subject} ${course.number}</h2>
         <h3>${course.title}</h3>
         <p><strong>Credits</strong>: ${course.credits}</p>
         <p><strong>Certificate</strong>: ${course.certificate}</p>
         <p>${course.description}</p>
-        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>`;
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
     
-    modal.showModal();
-    modal.addEventListener("click", () => {
-        modal.closest();
+    courseDetails.showModal();
+    
+    // Get close button and add event listener
+    const closeModal = document.querySelector('#closeModal');
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+
+    // Optional: Close when clicking outside the dialog (on backdrop)
+    courseDetails.addEventListener('click', (e) => {
+        const dialogDimensions = courseDetails.getBoundingClientRect();
+        if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            courseDetails.close();
+        }
     });
 }
+
+
+// Filter button functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        const filter = this.dataset.filter;
+        displayCourses(filter);
+    });
+});
+
+// Initial display
+displayCourses('all');
+});
+
