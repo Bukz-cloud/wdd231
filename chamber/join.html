@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potchefstroom Chamber Home Page</title>
-    <meta name="description" content="Welcome to the chamber of commerce website homepage, where you can get information about the chains of industries in our community.">
+    <title>Join Potchefstroom Chamber of Commerce</title>
+    <meta name="description" content="We encourage all new and existing organization to join us by completing the form on this page.">
     <meta name="author" content="Olubukade John Adesanmi">
     <link rel="stylesheet" href="./styles/directory.css">
     <link rel="stylesheet" href="./styles/directory-large.css">
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Homepage - Course Homepage for Olubukade John Adesanmi">
+    <meta property="og:title" content="Join - Join Potchefstroom Chamber of Commerce">
     <meta property="og:description" content="This page shows a list of seven organizations registered under the Potchefstroom Chamber of Commerce">
     <meta property="og:image" content="https://bukz-cloud.github.io/wdd231/chamber/directory.html/images/og-image.webp">
     <meta property="og:url" content="https://bukz-cloud.github.io/wdd231/chamber/directory.html">
@@ -37,7 +37,7 @@
     </header>
     
     <main>
-        <h1>Welcome to Potchefstroom Chamber of Commerce Home</h1>
+        
         <section>
             <div class="hero">
                 <img src="./images/hero-join.webp" alt="Hero Image">
@@ -60,69 +60,84 @@
 
                 <form method="GET" action="thankyou.html" class="chamber-form">
                 
-                <label>First Name</label>
-                <input type="text" name="first" required autocomplete="given-name" title="Your First Name">
-                <label>Last Name</label>
-                <input type="text" name="last" required autocomplete="family-name" title="Your Last Name">
-                <label>Organizational title</label>
-                <input type="text" name="title" required autocomplete="organization-title" title="Your organization title">
-                <label>Name of Organization</label>
-                <input type="text" name="organization">
-                <label>Acronyms</label>
-                <input type="text" name="acronym">
-                <label>Physical Address</label>
-                <input type="text" name="physicalAddress">
-                <label>Postal Address</label>
-                <input type="text" name="postalAddress">
-                <label>Phone</label>
-                <input type="tel" name="phone" placeholder="987-555-1234" autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="john89@gmail.com" autocomplete="tel" title="Your email" placeholder="email">
-                <label>Website</label>
-                <input type="url" name="website" required placeholder="https://example.com">
+                    <label for="first">First Name</label>
+                    <input type="text" name="first" id="first" required autocomplete="given-name" title="Your First Name">
+                    <label for="last">Last Name</label>
+                    <input type="text" name="last" id="last" required autocomplete="family-name" title="Your Last Name">
+                    <label for="title">Organizational title</label>
+                    <input type="text" name="title" id="title" required autocomplete="organization-title" title="Your organization title" pattern="[A-Za-z\s\-]{2,50}">
+                    <label for="organization">Name of Organization</label>
+                    <input type="text" name="organization" id="organization" pattern="" autocomplete="organization">
+                    <label for="acronym">Acronyms</label>
+                    <input type="text" name="acronym" id="acronym">
+                    <label for="physicalAddress">Physical Address</label>
+                    <input type="text" name="physicalAddress" id="physicalAddress">
+                    <label for="postalAddress">Postal Address</label>
+                    <input type="text" name="postalAddress" id="postalAddress">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="987-555-1234" autocomplete="tel" title="A Phone Number with dashes">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="john89@gmail.com" autocomplete="email" title="Your email" required>
+                    <label for="website">Website</label>
+                    <input type="url" name="website" id="website" required placeholder="https://example.com">
 
-                <h3 class="h3-form">Province</h3>
+                    <h3 class="h3-form">Province</h3>
 
-                <label>Gauteng</label>
-                <input type="checkbox" name="province" value="Gauteng" checked>
-                <label>Western Cape</label>
-                <input type="checkbox" name="province" value="Western-Cape"> 
-                <label>KwaZulu-Natal</label>
-                <input type="checkbox" name="province" value="KwaZulu-Natal"> 
-                <label>Northern Cape</label>
-                <input type="checkbox" name="province" value="Northern-Cape">
-                <label>Mpumalanga</label>
-                <input type="checkbox" name="province" value="Mpumalanga">
-                <label>Eastern Cape</label>
-                <input type="checkbox" name="province" value="Eastern-Cape">
-                <label>Free State</label>
-                <input type="checkbox" name="province" value="Free-State">
-                <label>Limpopo</label>
-                <input type="checkbox" name="province" value="Limpopo">
+                    <label>
+                        <input type="checkbox" name="province" value="Gauteng" id="Gauteng" checked>
+                        Gauteng
+                    </label>
+                    <label>
+                        <input type="checkbox" name="province" value="Western-Cape" id="Western-Cape"> 
+                        Western Cape
+                    </label>
+                    <label>
+                        <input type="checkbox" name="province" value="KwaZulu-Natal" id="KwaZulu-Natal"> 
+                        KwaZulu-Natal
+                    </label>
+                    <label>
+                        <input type="checkbox" name="province" value="Northern-Cape" id="Northern-Cape">
+                        Northern Cape
+                    </label>
+                    <label>
+                        <input type="checkbox" name="province" value="Mpumalanga" id="Mpumalanga">
+                        Mpumalanga
+                    </label>
+                    <label>
+                        <input type="checkbox" name="province" value="Eastern-Cape" id="Eastern-Cape">
+                        Eastern Cape
+                    </label>
+                    <label>
+                        <input type="checkbox" name="province" value="Free-State" id="Free-State">
+                        Free State
+                    </label>
+                    <label>
+                        <input type="checkbox" name="province" value="Limpopo" id="Limpopo">
+                        Limpopo
+                    </label>
+                    
+                    <label for="description">
+                        Please provide a detailed description of your organization:
+                        <textarea rows="5" cols="30" id="description" name="message" title="Describe your organization's mission, services, and goals" placeholder="Enter your text here..." required></textarea> 
+                    </label>
 
+                    <label>Please confirm you are human by typing in YES. (Please note, this is case sensitive)*</label>
+                    <input type="text">
+
+                    <label for="membership">Membership Level</label>
+                    <select id="membership" name="membership" required>
+                        <option value="" placeholder="select.."></option>
+                        <option value="np">np</option>
+                        <option value="gold">gold</option>
+                        <option value="silver">silver</option>
+                        <option value="bronze">bronze</option>
+                    </select>
+
+                    
+                    <input type="hidden" name="timestamp" id="timestamp">
                 
-                <label>
-                    Company Description:
-                    <textarea rows="5" cols="30" placeholder="Enter your text here..." name="message"></textarea> 
-                </label>
-
-                <label>Please confirm you are human by typing in YES. (Please note, this is case sensitive)*</label>
-                <input type="text">
-
-                <label for="membership">Membership Level</label>
-                <select id="membership" name="membership" required>
-                    <option value="Gold" placeholder="select.."></option>
-                    <option value="Gold">None</option>
-                    <option value="Gold">Gold</option>
-                    <option value="Gold">Silver</option>
-                    <option value="Gold">Bronze</option>
-                </select>
-
-                
-                <input type="hidden" name="timestamp" id="timestamp">
-               
-                
-                <button class="submit">Join Us</button>  
+                    
+                    <button type="submit" class="submit">Join Us</button>  
             </form>             
             </div>
             <div class="card-class">
