@@ -60,13 +60,13 @@
 
                 <form method="GET" action="thankyou.html" class="chamber-form">
                 
-                    <label for="first">First Name</label>
+                    <label for="first">First Name*</label>
                     <input type="text" name="first" id="first" required autocomplete="given-name" title="Your First Name">
-                    <label for="last">Last Name</label>
+                    <label for="last">Last Name*</label>
                     <input type="text" name="last" id="last" required autocomplete="family-name" title="Your Last Name">
-                    <label for="title">Organizational title</label>
+                    <label for="title">Organizational title*</label>
                     <input type="text" name="title" id="title" required autocomplete="organization-title" title="Your organization title" pattern="[A-Za-z\s\-]{7,}">
-                    <label for="organization">Name of Organization</label>
+                    <label for="organization">Name of Organization*</label>
                     <input type="text" name="organization" id="organization" title="Enter your organization name" autocomplete="organization" required>
                     <label for="acronym">Acronyms</label>
                     <input type="text" name="acronym" id="acronym">
@@ -74,11 +74,11 @@
                     <input type="text" name="physicalAddress" id="physicalAddress">
                     <label for="postalAddress">Postal Address</label>
                     <input type="text" name="postalAddress" id="postalAddress">
-                    <label for="phone">Phone</label>
+                    <label for="phone">Phone*</label>
                     <input type="tel" name="phone" id="phone" placeholder="987-555-1234" autocomplete="tel" title="A Phone Number with dashes" required>
-                    <label for="email">Email</label>
+                    <label for="email">Email*</label>
                     <input type="email" name="email" id="email" placeholder="john89@gmail.com" autocomplete="email" title="Your email" required>
-                    <label for="website">Website</label>
+                    <label for="website">Website*</label>
                     <input type="url" name="website" id="website" required placeholder="https://example.com">
 
                     <h3 class="h3-form">Province</h3>
@@ -125,7 +125,7 @@
                     <input type="text" name="human" id="human">
 
                     <label for="membership">
-                        Membership Level:
+                        Membership Level*:
                         <select id="membership" name="membership" required>
                             <option value="" disabled selected>Select...</option>
                             <option value="np">np</option>
