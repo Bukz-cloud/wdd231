@@ -60,6 +60,11 @@ td, th {
     padding: 8px;
 }
 
+.sub-head {
+    font-weight: bold;
+    background-color: lightgray;
+}
+
 .wireframe {
     display: flex;
     justify-content: center;
