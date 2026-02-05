@@ -142,6 +142,31 @@ nav.active {
     left: 10px;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .6rem;
+    max-width: 60%;
+    margin: 2rem auto;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: .5rem;
+    margin: 1rem;
+}
+
+.gallery figcaption {
+    padding-left: 1rem;
+}
+
+.gallery img:hover {
+    transform: translateY(-5px);
+}
+
 .join:hover {
     background-color: rgb(114, 3, 3);
 }

@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potchefstroom Chamber Home Page</title>
-    <meta name="description" content="Welcome to the chamber of commerce website homepage, where you can get information about the chains of industries in our community.">
+    <title>Join Potchefstroom Chamber of Commerce</title>
+    <meta name="description" content="We encourage all new and existing organization to join us by completing the form on this page.">
     <meta name="author" content="Olubukade John Adesanmi">
     <link rel="stylesheet" href="./styles/directory.css">
     <link rel="stylesheet" href="./styles/directory-large.css">
     <script src="./scripts/homepage.js" defer></script>
+    <script src="./scripts/results.js" defer></script>
     <link rel="icon" href="./images/favicon-two.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Homepage - Course Homepage for Olubukade John Adesanmi">
+    <meta property="og:title" content="Join - Join Potchefstroom Chamber of Commerce">
     <meta property="og:description" content="This page shows a list of seven organizations registered under the Potchefstroom Chamber of Commerce">
     <meta property="og:image" content="https://bukz-cloud.github.io/wdd231/chamber/directory.html/images/og-image.webp">
     <meta property="og:url" content="https://bukz-cloud.github.io/wdd231/chamber/directory.html">
@@ -27,69 +28,67 @@
         <button class="hamburger" aria-label="Toggle menu">☰</button>
         <nav class="nav-bar">
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
             </ul>
         </nav>    
     </header>
     
     <main>
-        <h1>Welcome to Potchefstroom Chamber of Commerce Home</h1>
+        
         <section>
             <div class="hero">
-                <img src="./images/hero-image.webp" alt="Hero Image">
+                <img src="./images/hero-discover.webp" alt="Hero Image">
                 <div class="hero-overlay">
-                <h1>Welcome to Our Organization</h1>
-                <p>Together we achieve more.</p>
-                <a href="join.html" class="join">Click to Join Us</a>
+                <h1>Discover the wonderful sites</h1>
+                <p>Potchefstroom! A home for all.</p>
+                <a href="index.html" class="join">Back to Our Homepage</a>
             </div>
             </div>
             
         </section>
-    
-        <section>
-            <div class="container">
-                <!-- Events Section -->
-                <div class="section event-card">
-                    <h2>Events</h2>
-                    <div class="section-content events-content">
-                        <p>No upcoming events scheduled.</p>
-                    </div>
-                </div>
-    
-                <!-- Current Weather Section -->
-                 <div class="weather-card card">
-                    <h2>Current Weather <span class="weather-icon"></span></h2>
-                    <p>The current temperature in Potchefstroom, South Africa is <span id="current-temp"></span></p>
-                    <figure>
-                        <img id="weather-icon" src="#" alt="Weather Icon">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-
-                <div class="data-card card">
-                    <h2>Weather Forecast</h2>
-                    <ul>
-                        <li><strong>Tomorrow: </strong><span id="day1"></span></li>
-                        <li><strong>Day 2: </strong><span id="day2"></span></li>
-                        <li><strong>Day 3: </strong><span id="day3"></span></li>
-                    </ul>
-                </div>
-    
-                
+        <section class="gallery">
+            <div>
+                <img src="./images/botanical-garden.webp" alt="botanical Garden">
+                <figcaption>Potcheftroom botanical garden</figcaption>
+            </div>
+            <div>
+                <img src="./images/mooirivier.webp" alt="botanical Garden">
+                <figcaption>Potcheftroom botanical garden</figcaption>
+            </div>
+            <div>
+                <img src="./images/oaktrees.webp" alt="Oak Tree Resort">
+                <figcaption>Welcome to the Oak Tree Resort</figcaption>
+            </div>
+            <div>
+                <img src="./images/potch-campus.webp" alt="Potchefstroom University Campus">
+                <figcaption>North-West University Campus</figcaption>
+            </div>
+            <div>
+                <img src="./images/rivercafe.webp" alt="River Cafe">
+                <figcaption>Behold our beautiful river cafe</figcaption>
+            </div>
+            <div>
+                <img src="./images/road-lodge.webp" alt="Road Lodge">
+                <figcaption>Road Lodge</figcaption>
+            </div>
+            <div>
+                <img src="./images/southern-region.webp" alt="South Region">
+                <figcaption>South Region</figcaption>
+            </div>
+            <div>
+                <img src="./images/royal-tree.webp" alt="Royal Tree">
+                <figcaption>Royal Tree</figcaption>
+            </div>
+            <div>
+                <img src="./images/gunners.webp" alt="Gunners Memorial National Park">
+                <figcaption>Gunners Memorial National Park</figcaption>
             </div>
         </section>
-        
-        <section class="section">
-            <h2 class="home-company">Visit Our Companies</h2>           
-            <div id="membersContainer" class="grid-view">
-                <!-- Members will be dynamically loaded here -->
-            </div>
-        </section>
+    
 
-    </main>
         
     <footer>
         <div class="footer">

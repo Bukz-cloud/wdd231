@@ -5,27 +5,21 @@
 }
 
 body{
-    width: 100%;
-    min-height: 100vh;
+    margin: 0;
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
     background-color: #F9FAFB;
     
 }
 
-main {
-    width: 100%;
-    padding: 1rem;
-}
-
-header p {
-    padding-left: 1rem;
+main, header {
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto
 }
 
 section {
-    width: 100%;
-    margin: 2rem 0;
-    padding-left: 1rem;
+    margin: 3rem 0;
 }
 
 h1 {
@@ -54,7 +48,7 @@ h2 {
 }
 
 ul li {
-    padding-left: 2rem;
+
     list-style: none;
 }
 
@@ -76,22 +70,22 @@ td, th {
     background-color: lightgray;
 }
 
-.wireframe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
+.wireframe img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .imglarge {
-    width: 80%;
-    height: auto;
+    margin: 2rem auto;
+    max-width: 100%;
+    text-align: center;
 }
-
+ 
 .imgmobile {
-    width: 50%;
-    height: auto;
+    margin: 2rem auto;
+    max-width: 60%;
+    text-align: center;
 }
 
 footer {
