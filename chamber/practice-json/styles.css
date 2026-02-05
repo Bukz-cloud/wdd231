@@ -1,0 +1,389 @@
+/* styles.css - Responsive Grid Layout with Named Grid Areas */
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --background: #f9fafb;
+    --card-background: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --spacing: 1rem;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background);
+}
+
+/* ============================================
+   HEADER & FOOTER
+   ============================================ */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+footer {
+    background-color: var(--text-dark);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ============================================
+   CARD COMPONENT STYLES
+   ============================================ */
+.attraction-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: grid;
+    /* Grid template areas defined per breakpoint below */
+}
+
+.attraction-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    padding: 1rem 1rem 0.5rem;
+    grid-area: title;
+}
+
+.card-figure {
+    margin: 0;
+    overflow: hidden;
+    grid-area: image;
+}
+
+.card-figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover .card-figure img {
+    transform: scale(1.05);
+}
+
+.card-address {
+    font-style: normal;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    padding: 0 1rem 0.5rem;
+    grid-area: address;
+    display: flex;
+    align-items: center;
+}
+
+.card-address::before {
+    content: "📍 ";
+    margin-right: 0.25rem;
+}
+
+.card-description {
+    color: var(--text-dark);
+    padding: 0 1rem;
+    line-height: 1.6;
+    grid-area: description;
+}
+
+.card-button {
+    margin: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    grid-area: button;
+}
+
+.card-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.card-button:active {
+    transform: scale(0.98);
+}
+
+.card-button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   SMALL SCREENS (320px - 640px)
+   Single column with creative stacked layout
+   ============================================ */
+@media (min-width: 320px) and (max-width: 640px) {
+    .attractions-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        /* Named grid areas for positioning 8 cards */
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+
+    /* Assign each card to its grid area */
+    .attraction-card:nth-child(1) { grid-area: card1; }
+    .attraction-card:nth-child(2) { grid-area: card2; }
+    .attraction-card:nth-child(3) { grid-area: card3; }
+    .attraction-card:nth-child(4) { grid-area: card4; }
+    .attraction-card:nth-child(5) { grid-area: card5; }
+    .attraction-card:nth-child(6) { grid-area: card6; }
+    .attraction-card:nth-child(7) { grid-area: card7; }
+    .attraction-card:nth-child(8) { grid-area: card8; }
+
+    /* Card internal layout for small screens */
+    .attraction-card {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "title"
+            "address"
+            "description"
+            "button";
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* ============================================
+   MEDIUM SCREENS (641px - 1024px)
+   Asymmetric 2-column layout with variety
+   ============================================ */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .attractions-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        /* Creative asymmetric layout using named areas */
+        grid-template-areas:
+            "card1 card1"    /* Card 1 spans both columns */
+            "card2 card3"    /* Cards 2 and 3 side by side */
+            "card4 card5"    /* Cards 4 and 5 side by side */
+            "card6 card6"    /* Card 6 spans both columns */
+            "card7 card8";   /* Cards 7 and 8 side by side */
+    }
+
+    /* Assign each card to its grid area */
+    .attraction-card:nth-child(1) { grid-area: card1; }
+    .attraction-card:nth-child(2) { grid-area: card2; }
+    .attraction-card:nth-child(3) { grid-area: card3; }
+    .attraction-card:nth-child(4) { grid-area: card4; }
+    .attraction-card:nth-child(5) { grid-area: card5; }
+    .attraction-card:nth-child(6) { grid-area: card6; }
+    .attraction-card:nth-child(7) { grid-area: card7; }
+    .attraction-card:nth-child(8) { grid-area: card8; }
+
+    /* Card internal layout - horizontal for full-width cards */
+    .attraction-card:nth-child(1),
+    .attraction-card:nth-child(6) {
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "image title"
+            "image address"
+            "image description"
+            "image button";
+    }
+
+    /* Card internal layout - vertical for regular cards */
+    .attraction-card:nth-child(2),
+    .attraction-card:nth-child(3),
+    .attraction-card:nth-child(4),
+    .attraction-card:nth-child(5),
+    .attraction-card:nth-child(7),
+    .attraction-card:nth-child(8) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "title"
+            "address"
+            "description"
+            "button";
+    }
+
+    /* Adjust padding for horizontal cards */
+    .attraction-card:nth-child(1) .card-title,
+    .attraction-card:nth-child(6) .card-title {
+        padding-top: 1rem;
+        padding-bottom: 0.25rem;
+    }
+}
+
+/* ============================================
+   LARGE SCREENS (1025px and above)
+   Complex magazine-style layout
+   ============================================ */
+@media (min-width: 1025px) {
+    .attractions-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        /* Magazine-style layout with varying sizes */
+        grid-template-areas:
+            "card1 card1 card2 card3"
+            "card1 card1 card4 card4"
+            "card5 card6 card4 card4"
+            "card7 card7 card8 card8";
+    }
+
+    /* Assign each card to its grid area */
+    .attraction-card:nth-child(1) { grid-area: card1; }
+    .attraction-card:nth-child(2) { grid-area: card2; }
+    .attraction-card:nth-child(3) { grid-area: card3; }
+    .attraction-card:nth-child(4) { grid-area: card4; }
+    .attraction-card:nth-child(5) { grid-area: card5; }
+    .attraction-card:nth-child(6) { grid-area: card6; }
+    .attraction-card:nth-child(7) { grid-area: card7; }
+    .attraction-card:nth-child(8) { grid-area: card8; }
+
+    /* Large feature cards (1, 4) - horizontal layout */
+    .attraction-card:nth-child(1),
+    .attraction-card:nth-child(4) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "image title"
+            "image address"
+            "image description"
+            "image button";
+    }
+
+    .attraction-card:nth-child(1) .card-figure img,
+    .attraction-card:nth-child(4) .card-figure img {
+        height: 100%;
+        min-height: 300px;
+    }
+
+    /* Medium cards (7, 8) - horizontal compact */
+    .attraction-card:nth-child(7),
+    .attraction-card:nth-child(8) {
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "image title"
+            "image address"
+            "image description"
+            "image button";
+    }
+
+    .attraction-card:nth-child(7) .card-figure img,
+    .attraction-card:nth-child(8) .card-figure img {
+        height: 100%;
+        min-height: 200px;
+    }
+
+    /* Small cards (2, 3, 5, 6) - vertical stack */
+    .attraction-card:nth-child(2),
+    .attraction-card:nth-child(3),
+    .attraction-card:nth-child(5),
+    .attraction-card:nth-child(6) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "title"
+            "address"
+            "description"
+            "button";
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .card-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY & PRINT STYLES
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media print {
+    .attractions-grid {
+        display: block;
+    }
+
+    .attraction-card {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+
+    .card-button {
+        display: none;
+    }
+}

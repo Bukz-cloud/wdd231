@@ -18,23 +18,16 @@
         padding: 0;
     }
 
-    .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: .6rem;
-    max-width: 60%;
-    margin: 2rem auto;
-}
-
-    
-    .home-company {
-        width: 65%;
+    .section {
+        max-width: 100%;
+        margin: 0 auto;
     }
-
+ 
     .container {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
+        margin: 0 auto;
     }
 
     .event-card {
@@ -90,12 +83,84 @@
     }
 }
 
-@media (min-width: 1020px) {
-    .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: .6rem;
-    max-width: 60%;
-    margin: 2rem auto;
+@media (min-width: 1025px) {
+    .attractions-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        /* Simple 4-column layout with named areas */
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+
+    /* Assign each card to its grid area */
+    .attraction-card:nth-child(1) { grid-area: card1; }
+    .attraction-card:nth-child(2) { grid-area: card2; }
+    .attraction-card:nth-child(3) { grid-area: card3; }
+    .attraction-card:nth-child(4) { grid-area: card4; }
+    .attraction-card:nth-child(5) { grid-area: card5; }
+    .attraction-card:nth-child(6) { grid-area: card6; }
+    .attraction-card:nth-child(7) { grid-area: card7; }
+    .attraction-card:nth-child(8) { grid-area: card8; }
+
+    /* ALL cards use vertical layout - uniform appearance */
+    .attraction-card {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "title"
+            "address"
+            "description"
+            "button";
+    }
+
+    /* All images same size */
+    .card-figure {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .card-figure img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .card-title {
+        font-size: 1.75rem;
+    }
 }
+
+/* ============================================
+   ACCESSIBILITY & PRINT STYLES
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media print {
+    .attractions-grid {
+        display: block;
+    }
+
+    .attraction-card {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+
+    .card-button {
+        display: none;
+    }
 }

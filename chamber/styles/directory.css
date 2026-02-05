@@ -4,10 +4,32 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #042c83;
+    --secondary-color: #3b82f6;
+    --text-dark: #0c0c0c;
+    --text-light: #111111;
+    --background: #f9fafb;
+    --card-background: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --spacing: 1rem;
+}
+
 body {
     background-color: rgba(245, 243, 241, 0.829);
     font-family: "Roboto", sans-serif;
-    height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+    width: 100%;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1px;
 }
 
 header {
@@ -18,8 +40,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 2rem;
 }
 
 @keyframes gradient-animation {
@@ -100,9 +120,10 @@ nav.active {
 
 .hero {
     width: 100%;
-    height: 80vh; /* Adjust height as needed */
+    height: 50vh; /* Adjust height as needed */
     position: relative;
     overflow: hidden;
+    margin-bottom: 2rem;
 }
 
 .hero img {
@@ -142,31 +163,6 @@ nav.active {
     left: 10px;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: .6rem;
-    max-width: 60%;
-    margin: 2rem auto;
-}
-
-.gallery img {
-    width: 300px;
-    height: 200px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: .5rem;
-    margin: 1rem;
-}
-
-.gallery figcaption {
-    padding-left: 1rem;
-}
-
-.gallery img:hover {
-    transform: translateY(-5px);
-}
-
 .join:hover {
     background-color: rgb(114, 3, 3);
 }
@@ -178,7 +174,6 @@ nav.active {
     text-align: center;
     color: #000;
     padding: 1.5rem .5rem;
-    width: 100%;
     margin: 0 auto;
 }
 
@@ -193,8 +188,8 @@ nav.active {
 .event-card {
     flex: 1;
     border: 1px solid lightgray;
-    margin: 2rem auto;
-    border-radius: 5%;
+    margin:2rem auto;
+    border-radius: 5px;
     background-color: rgb(204, 201, 204);
     padding-bottom: 10px;
 }
@@ -202,7 +197,7 @@ nav.active {
 .data-card, .weather-card {
     flex: 1;
     border: 1px solid lightgray;
-    margin: 2rem;
+    margin:2rem;
     border-radius: 5px;
     background-color: rgb(204, 201, 204);
     padding-bottom: 10px;
@@ -210,8 +205,8 @@ nav.active {
 
 .data-card li, .weather-card p {
     list-style: none;
-    padding: .5rem 3rem;
     text-align: left;
+    padding-left: 10px;
 }
 
 .features {
@@ -254,7 +249,6 @@ nav.active {
 
 .card {
     border: 1px solid #ccc;
-    padding: 1rem;
     border-radius: 8px;
     text-align: center;
     font-size: .8rem;
@@ -336,7 +330,6 @@ dialog::backdrop {
 .home-company {
     background-color: #000;
     color: #fff;
-    min-width: 100%;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 2rem;
@@ -600,5 +593,169 @@ input:-webkit-autofill{
     border: 1px solid #E07A5F;
     border-radius: 6px;
     line-height: 25px;
+}
+
+
+.attraction-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: grid;
+    /* Grid template areas defined per breakpoint below */
+}
+
+.attraction-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    padding: 1rem 1rem 0.5rem;
+    grid-area: title;
+}
+
+.card-figure {
+    margin: 0;
+    overflow: hidden;
+    grid-area: image;
+    width: 300px;
+    height: 200px;
+    max-width: 100%;
+}
+
+.card-figure img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+}
+
+.attraction-card:hover .card-figure img {
+    transform: scale(1.05);
+}
+
+.card-address {
+    font-style: normal;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    padding: 0 1rem 0.5rem;
+    grid-area: address;
+    display: flex;
+    align-items: center;
+}
+
+.card-address::before {
+    content: "📍 ";
+    margin-right: 0.25rem;
+}
+
+.card-description {
+    color: var(--text-dark);
+    padding: 0 1rem;
+    line-height: 1.6;
+    grid-area: description;
+}
+
+.card-button {
+    margin: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    grid-area: button;
+}
+
+.card-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.card-button:active {
+    transform: scale(0.98);
+}
+
+.card-button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   SMALL SCREENS (320px - 640px)
+   Single column with uniform vertical cards
+   ============================================ */
+@media (min-width: 320px) and (max-width: 640px) {
+    .attractions-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        /* Named grid areas for positioning 8 cards */
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+
+    /* Assign each card to its grid area */
+    .attraction-card:nth-child(1) { grid-area: card1; }
+    .attraction-card:nth-child(2) { grid-area: card2; }
+    .attraction-card:nth-child(3) { grid-area: card3; }
+    .attraction-card:nth-child(4) { grid-area: card4; }
+    .attraction-card:nth-child(5) { grid-area: card5; }
+    .attraction-card:nth-child(6) { grid-area: card6; }
+    .attraction-card:nth-child(7) { grid-area: card7; }
+    .attraction-card:nth-child(8) { grid-area: card8; }
+
+    /* ALL cards use vertical layout */
+    .attraction-card {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "title"
+            "address"
+            "description"
+            "button";
+    }
+
+    /* Ensure images scale down on very small screens but maintain aspect ratio */
+    .card-figure {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .card-figure img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
 }
 
