@@ -88,6 +88,10 @@ td, th {
     text-align: center;
 }
 
+figcaption {
+    margin-top: 1rem;
+}
+
 footer {
     background-color: #EDF6FF;
     padding: 1rem;
