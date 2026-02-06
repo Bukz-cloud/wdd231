@@ -596,6 +596,55 @@ input:-webkit-autofill{
 }
 
 
+.loading-skeleton {
+    display: grid;
+    grid-template-columns: inherit;
+    grid-template-areas: inherit;
+    gap: inherit;
+}
+
+.skeleton-card {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+    border-radius: var(--border-radius);
+    min-height: 400px;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.loading-skeleton.hidden {
+    display: none;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+/* Use GPU acceleration for transforms */
+.attraction-card,
+.card-figure img,
+.card-button {
+    will-change: transform;
+}
+
+/* Contain layout shifts */
+.card-figure {
+    content-visibility: auto;
+}
+
+/* Optimize repaints */
+.attraction-card:hover {
+    transform: translateY(-4px) translateZ(0);
+}
+
 .attraction-card {
     background-color: var(--card-background);
     border-radius: var(--border-radius);
@@ -689,10 +738,6 @@ input:-webkit-autofill{
     outline-offset: 2px;
 }
 
-/* ============================================
-   SMALL SCREENS (320px - 640px)
-   Single column with uniform vertical cards
-   ============================================ */
 @media (min-width: 320px) and (max-width: 640px) {
     .attractions-grid {
         display: grid;

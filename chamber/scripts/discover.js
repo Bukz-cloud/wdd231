@@ -27,6 +27,12 @@ function createAttractionCard(attraction) {
     img.width = 300;
     img.height = 200;
     img.loading = 'lazy'; // Performance optimization
+    img.decoding = 'async'; //Decode images asynchronously
+
+    // Add fetchpriority for first few images
+    if (attraction.id <= 2) {
+        img.fetchpriority = 'high';
+    }
     
     figure.appendChild(img);
 
@@ -84,6 +90,12 @@ function renderAttractions() {
         return;
     }
 
+    // Hide loading skeleton
+    const skeleton = grid.querySelector('.loading-skeleton');
+    if (skeleton) {
+        skeleton.classList.add('hidden');
+    }
+
     // Clear any existing content
     grid.innerHTML = '';
 
@@ -94,6 +106,29 @@ function renderAttractions() {
     });
 
     console.log(`Successfully rendered ${attractions.length} attraction cards`);
+}
+
+//Lazy load images that are not in viewport
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            }
+        });
+    }, {
+        rootMargin: '50px'
+    });
+
+    //Observe all images
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
 }
 
 /**
