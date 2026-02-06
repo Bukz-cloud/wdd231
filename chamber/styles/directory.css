@@ -120,7 +120,7 @@ nav.active {
 
 .hero {
     width: 100%;
-    height: 50vh; /* Adjust height as needed */
+    height: 80vh; /* Adjust height as needed */
     position: relative;
     overflow: hidden;
     margin-bottom: 2rem;
@@ -468,13 +468,19 @@ footer {
 }
 
 .photo {
-    width: 65px;
-    height: auto;
-    }
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 
 .photo-tweet {
     width: 50px;
-    }
+    border-radius: 50%;
+}
+
+.linkedln {
+    border-radius: 50%;
+}
 
 .footer-info {
     margin-bottom: 1rem;
@@ -642,11 +648,6 @@ input:-webkit-autofill{
     /* Grid template areas defined per breakpoint below */
 }
 
-.attraction-card:hover {
-    transform: translateY(-4px) translateZ(0);
-    box-shadow: var(--shadow-hover);
-}
-
 .card-title {
     font-size: 1.5rem;
     color: var(--text-dark);
@@ -671,10 +672,6 @@ input:-webkit-autofill{
     display: block;
     transition: transform 0.3s ease;
     max-width: 100%;
-}
-
-.attraction-card:hover .card-figure img {
-    transform: scale(1.05);
 }
 
 .card-address {

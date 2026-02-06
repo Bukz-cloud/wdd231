@@ -112,6 +112,15 @@
     .card-title {
         font-size: 1.75rem;
     }
+
+    .attraction-card:hover {
+        transform: translateY(-4px) translateZ(0);
+        box-shadow: var(--shadow-hover);
+    }
+
+    .attraction-card:hover .card-figure img {
+        transform: scale(1.05);
+    }
 }
 
 /* ACCESSIBILITY & PRINT STYLES */

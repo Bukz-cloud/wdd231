@@ -22,7 +22,14 @@
     .attraction-card:nth-child(8) { grid-area: card8; }
 
     /* ALL cards use vertical layout - uniform appearance */
+    .attraction-card:hover {
+        transform: translateY(-4px) translateZ(0);
+        box-shadow: var(--shadow-hover);
+    }
 
+    .attraction-card:hover .card-figure img {
+        transform: scale(1.05);
+    }
 
     .card-figure img {
         width: 100%;

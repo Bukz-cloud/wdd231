@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('lastModified').textContent = 'Last Modification: ' + document.lastModified;
 
 // script.js - Dynamically build attraction cards
-import { attractions } from './attractions.mjs';
+import { attractions } from '../data/attractions.mjs';
 
 /**
  * Creates a single attraction card with semantic HTML
