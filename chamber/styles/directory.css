@@ -762,14 +762,7 @@ input:-webkit-autofill{
     }
 
     /* Ensure images scale down on very small screens but maintain aspect ratio */
-  
-    .card-figure img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        aspect-ratio: 3 / 2;
-    }
-
+ 
     header h1 {
         font-size: 1.5rem;
     }
@@ -778,8 +771,6 @@ input:-webkit-autofill{
         font-size: 1rem;
     }
 
-    .card-title {
-        font-size: 1.25rem;
-    }
+
 
     
