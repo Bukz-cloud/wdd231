@@ -625,12 +625,6 @@ input:-webkit-autofill{
     will-change: transform;
 }
 
-/* Contain layout shifts */
-.card-figure {
-    content-visibility: auto;
-}
-
-
 .attraction-card {
     background-color: var(--card-background);
     border-radius: var(--border-radius);
@@ -638,6 +632,13 @@ input:-webkit-autofill{
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "image"
+        "title"
+        "address"
+        "description"
+        "button";
     /* Grid template areas defined per breakpoint below */
 }
 
@@ -660,6 +661,7 @@ input:-webkit-autofill{
     width: 300px;
     height: 200px;
     max-width: 100%;
+    content-visibility: auto;
 }
 
 .card-figure img {
@@ -740,36 +742,25 @@ input:-webkit-autofill{
             "card8";
     }
 
-    /* Assign each card to its grid area */
-    .attraction-card:nth-child(1) { grid-area: card1; }
-    .attraction-card:nth-child(2) { grid-area: card2; }
-    .attraction-card:nth-child(3) { grid-area: card3; }
-    .attraction-card:nth-child(4) { grid-area: card4; }
-    .attraction-card:nth-child(5) { grid-area: card5; }
-    .attraction-card:nth-child(6) { grid-area: card6; }
-    .attraction-card:nth-child(7) { grid-area: card7; }
-    .attraction-card:nth-child(8) { grid-area: card8; }
+/* Assign each card to its grid area */
+.attraction-card:nth-child(1) { grid-area: card1; }
+.attraction-card:nth-child(2) { grid-area: card2; }
+.attraction-card:nth-child(3) { grid-area: card3; }
+.attraction-card:nth-child(4) { grid-area: card4; }
+.attraction-card:nth-child(5) { grid-area: card5; }
+.attraction-card:nth-child(6) { grid-area: card6; }
+.attraction-card:nth-child(7) { grid-area: card7; }
+.attraction-card:nth-child(8) { grid-area: card8; }
 
-    /* ALL cards use vertical layout */
-    .attraction-card {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "image"
-            "title"
-            "address"
-            "description"
-            "button";
-    }
+/* Ensure images scale down on very small screens but maintain aspect ratio */
 
-    /* Ensure images scale down on very small screens but maintain aspect ratio */
- 
-    header h1 {
-        font-size: 1.5rem;
-    }
+header h1 {
+    font-size: 1.5rem;
+}
 
-    header p {
-        font-size: 1rem;
-    }
+header p {
+    font-size: 1rem;
+}
 
 
 
