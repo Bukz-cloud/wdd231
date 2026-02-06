@@ -185,16 +185,8 @@ nav.active {
     margin-bottom: 2rem;
 }
 
-.event-card {
-    flex: 1;
-    border: 1px solid lightgray;
-    margin:2rem auto;
-    border-radius: 5px;
-    background-color: rgb(204, 201, 204);
-    padding-bottom: 10px;
-}
 
-.data-card, .weather-card {
+.event-card, .data-card, .weather-card {
     flex: 1;
     border: 1px solid lightgray;
     margin:2rem;
@@ -254,6 +246,7 @@ nav.active {
     font-size: .8rem;
     transition: transform 0.3s;
     overflow: hidden;
+    padding: .5rem;
 }
 
 .card:hover {
@@ -317,6 +310,7 @@ dialog {
     border-radius: 10px;
     padding: 1.5rem;
     width: 320px;
+    font-size: .7rem;
 }
 
 dialog::backdrop {
@@ -345,8 +339,6 @@ dialog::backdrop {
     max-width: min(100%, 1000px);
     padding: 0 1rem;
 }
-
-
 
 .member-row {
     background: #d9d9d9;
@@ -453,7 +445,7 @@ footer {
     line-height: 1.5;
     padding: 2rem 3rem;
     text-align: left;
-    margin-top: auto;
+    margin-top: 2rem;
 }
 
 .social-links {
@@ -625,9 +617,7 @@ input:-webkit-autofill{
     display: none;
 }
 
-/* ============================================
-   PERFORMANCE OPTIMIZATIONS
-   ============================================ */
+/* PERFORMANCE OPTIMIZATIONS*/
 /* Use GPU acceleration for transforms */
 .attraction-card,
 .card-figure img,
@@ -640,10 +630,6 @@ input:-webkit-autofill{
     content-visibility: auto;
 }
 
-/* Optimize repaints */
-.attraction-card:hover {
-    transform: translateY(-4px) translateZ(0);
-}
 
 .attraction-card {
     background-color: var(--card-background);
@@ -656,7 +642,7 @@ input:-webkit-autofill{
 }
 
 .attraction-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) translateZ(0);
     box-shadow: var(--shadow-hover);
 }
 
@@ -668,7 +654,7 @@ input:-webkit-autofill{
 }
 
 .card-figure {
-    margin: 0;
+    margin: 0 auto;
     overflow: hidden;
     grid-area: image;
     width: 300px;
@@ -738,8 +724,7 @@ input:-webkit-autofill{
     outline-offset: 2px;
 }
 
-@media (min-width: 320px) and (max-width: 640px) {
-    .attractions-grid {
+.attractions-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -777,13 +762,7 @@ input:-webkit-autofill{
     }
 
     /* Ensure images scale down on very small screens but maintain aspect ratio */
-    .card-figure {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        margin: 0 auto;
-    }
-
+  
     .card-figure img {
         width: 100%;
         max-width: 300px;
@@ -802,5 +781,5 @@ input:-webkit-autofill{
     .card-title {
         font-size: 1.25rem;
     }
-}
 
+    

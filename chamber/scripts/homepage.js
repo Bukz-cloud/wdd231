@@ -212,7 +212,7 @@ const cards = [
         level: "bronze"
     },
     {
-        title: "NM Membership",
+        title: "NP Membership",
         summary: "NP membership is for non profit organizations and there is no fee (np)",
         details: "NP members receive basic chamber benefits, including access to networking events, regular newsletters, and updates on local business opportunities, advocacy efforts, and training programs. Members are listed in the chamber’s online directory and may attend events at member-only or discounted rates. This membership level is ideal for individuals, startups, and small organizations seeking to stay informed, build relationships, and gradually engage with the local business ecosystem.",
         level: "non-profit"
