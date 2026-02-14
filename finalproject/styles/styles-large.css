@@ -383,7 +383,7 @@ header {
 /* Page Header */
 /* Page Header - FIXED WHITE ON WHITE */
 .page-header {
-    background: linear-gradient(135deg, var(--primary-color), #4f46e5);
+    background: #021745;
     color: var(--white);
     padding: 3rem 0;
     text-align: center;
@@ -422,7 +422,6 @@ header {
 }
 
 /* Resources Section */
-/* Resources Section - FIXED CONTRAST */
 .resources-section {
     padding: 4rem 0;
     background-color: var(--bg-light);
@@ -843,7 +842,7 @@ header {
 .success-content {
     text-align: center;
     padding: 2rem;
-    color: #1f2937;
+    color: #000000;
 }
 
 .success-icon {
