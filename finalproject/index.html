@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to our citadel of learning where great leaders are made. ABY Elementary School promises to deliver the best type of education.">
+    <meta name="author" content="Olubukade John Adesanmi">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script type="module" src="./scripts/storage.js" defer></script>
+    <script type="module" src="./scripts/main.js" defer></script>
+    <script type="module" src="./scripts/resources.js" defer></script>
+    <script type="module" src="./scripts/registration.js" defer></script>
+    <title>Home - ABY Elementary School</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Homepage - ABY Elementary School">
+    <meta property="og:description" content="Welcome to our citadel of learning where great leaders are made. ABY Elementary School promises to deliver the best type of education.">
+    <meta property="og:image" content="https://bukz-cloud.github.io/wdd231/index.html">
+    <meta property="og:url" content="https://bukz-cloud.github.io/wdd231/index.html">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="School Logo">
+                    <h1>Home - ABY Elementary School</h1>
+                </div> 
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Overlay -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h2>Welcome to ABY Elementary School</h2>
+                    <p>A Citadel of Learning Where Kings are Raised</p>
+                    <a href="registration.html" class="cta-button">Enroll Today</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <h2>About Our School</h2>
+                <div class="about-content">
+                    <div class="about-card">
+                        <div class="icon">🎓</div>
+                        <h3>Quality Education</h3>
+                        <p>We provide a comprehensive curriculum designed to nurture young minds and prepare them for future success.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon">👥</div>
+                        <h3>Experienced Staff</h3>
+                        <p>Our dedicated teachers bring years of experience and passion to create an engaging learning environment.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon">🌟</div>
+                        <h3>Modern Facilities</h3>
+                        <p>State-of-the-art classrooms, library, computer lab, and outdoor spaces for holistic development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p class="section-description">Have questions? We'd love to hear from you!</p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Interest In *</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Select an option</option>
+                                <option value="enrollment">Enrollment Information</option>
+                                <option value="tour">Schedule a Tour</option>
+                                <option value="curriculum">Curriculum Details</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ABY Elementary School</h3>
+                    <p>Nurturing young minds since 1995</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Education Lane, Learning City</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ info@aby.edu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ABY Elementary School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

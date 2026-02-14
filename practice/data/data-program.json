@@ -1,0 +1,17 @@
+[
+  { "id":1, "name":"Art Club", "grade":"1-5", "teacher":"Ms. Smith", "schedule":"Mon 2PM", "capacity":25 },
+  { "id":2, "name":"Science Explorers", "grade":"3-5", "teacher":"Mr. Adams", "schedule":"Tue 3PM", "capacity":20 },
+  { "id":3, "name":"Math Wizards", "grade":"2-5", "teacher":"Mrs. Lee", "schedule":"Wed 2PM", "capacity":30 },
+  { "id":4, "name":"Music Ensemble", "grade":"1-5", "teacher":"Ms. Brown", "schedule":"Thu 1PM", "capacity":40 },
+  { "id":5, "name":"Robotics", "grade":"4-5", "teacher":"Mr. Clark", "schedule":"Fri 3PM", "capacity":15 },
+  { "id":6, "name":"Drama Club", "grade":"2-5", "teacher":"Mrs. King", "schedule":"Mon 3PM", "capacity":25 },
+  { "id":7, "name":"Reading Stars", "grade":"1-3", "teacher":"Ms. Hall", "schedule":"Tue 1PM", "capacity":35 },
+  { "id":8, "name":"Chess Club", "grade":"3-5", "teacher":"Mr. Scott", "schedule":"Wed 4PM", "capacity":20 },
+  { "id":9, "name":"Coding Kids", "grade":"4-5", "teacher":"Ms. Green", "schedule":"Thu 2PM", "capacity":18 },
+  { "id":10, "name":"Garden Club", "grade":"1-5", "teacher":"Mrs. White", "schedule":"Fri 1PM", "capacity":30 },
+  { "id":11, "name":"Sports Academy", "grade":"2-5", "teacher":"Coach Ray", "schedule":"Mon 4PM", "capacity":50 },
+  { "id":12, "name":"Debate Club", "grade":"4-5", "teacher":"Mr. Young", "schedule":"Tue 4PM", "capacity":15 },
+  { "id":13, "name":"Creative Writing", "grade":"3-5", "teacher":"Ms. Hill", "schedule":"Wed 1PM", "capacity":20 },
+  { "id":14, "name":"STEM Lab", "grade":"3-5", "teacher":"Dr. Ray", "schedule":"Thu 3PM", "capacity":25 },
+  { "id":15, "name":"Environmental Club", "grade":"2-5", "teacher":"Mrs. Fox", "schedule":"Fri 2PM", "capacity":30 }
+]

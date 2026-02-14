@@ -1,0 +1,184 @@
+{
+  "resources": [
+    {
+      "id": 1,
+      "name": "Science Laboratory",
+      "category": "classroom",
+      "description": "Fully equipped modern science lab with microscopes, specimens, and interactive learning tools for hands-on experiments.",
+      "capacity": 30,
+      "availability": "Available",
+      "features": "Safety equipment, Chemical storage, Interactive displays",
+      "imageColor": "#10b981"
+    },
+    {
+      "id": 2,
+      "name": "Computer Lab",
+      "category": "technology",
+      "description": "State-of-the-art computer lab with 40 workstations, high-speed internet, and educational software for digital learning.",
+      "capacity": 40,
+      "availability": "Available",
+      "features": "40 computers, Coding software, Digital whiteboard",
+      "imageColor": "#3b82f6"
+    },
+    {
+      "id": 3,
+      "name": "Music Room",
+      "category": "classroom",
+      "description": "Creative space equipped with various musical instruments, sound systems, and practice areas for music education.",
+      "capacity": 25,
+      "availability": "Available",
+      "features": "Pianos, Percussion instruments, Recording equipment",
+      "imageColor": "#f59e0b"
+    },
+    {
+      "id": 4,
+      "name": "Library & Media Center",
+      "category": "facility",
+      "description": "Extensive collection of over 10,000 books, digital resources, and quiet reading areas for independent study.",
+      "capacity": 50,
+      "availability": "Available",
+      "features": "10,000+ books, E-readers, Study areas",
+      "imageColor": "#8b5cf6"
+    },
+    {
+      "id": 5,
+      "name": "Art Studio",
+      "category": "classroom",
+      "description": "Bright and inspiring art studio with painting, drawing, and sculpting materials for creative expression.",
+      "capacity": 30,
+      "availability": "Available",
+      "features": "Art supplies, Kiln, Display gallery",
+      "imageColor": "#ec4899"
+    },
+    {
+      "id": 6,
+      "name": "Gymnasium",
+      "category": "facility",
+      "description": "Indoor sports facility with basketball courts, volleyball nets, and equipment for physical education and sports.",
+      "capacity": 100,
+      "availability": "Available",
+      "features": "Basketball court, Volleyball, Climbing wall",
+      "imageColor": "#ef4444"
+    },
+    {
+      "id": 7,
+      "name": "Outdoor Playground",
+      "category": "outdoor",
+      "description": "Safe and modern playground with slides, swings, climbing structures, and soft-surface ground covering.",
+      "capacity": 80,
+      "availability": "Available",
+      "features": "Slides, Swings, Safety surfacing",
+      "imageColor": "#14b8a6"
+    },
+    {
+      "id": 8,
+      "name": "Robotics Lab",
+      "category": "technology",
+      "description": "Advanced robotics and STEM lab with programmable robots, 3D printers, and engineering tools for innovative learning.",
+      "capacity": 25,
+      "availability": "Available",
+      "features": "3D printers, Robot kits, Programming tools",
+      "imageColor": "#6366f1"
+    },
+    {
+      "id": 9,
+      "name": "Cafeteria",
+      "category": "facility",
+      "description": "Spacious dining area serving nutritious meals with options for various dietary requirements and preferences.",
+      "capacity": 200,
+      "availability": "Available",
+      "features": "Healthy meals, Dietary options, Modern kitchen",
+      "imageColor": "#f97316"
+    },
+    {
+      "id": 10,
+      "name": "Kindergarten Classroom",
+      "category": "classroom",
+      "description": "Colorful and engaging learning environment designed specifically for our youngest learners with age-appropriate materials.",
+      "capacity": 20,
+      "availability": "Available",
+      "features": "Learning centers, Play areas, Interactive boards",
+      "imageColor": "#84cc16"
+    },
+    {
+      "id": 11,
+      "name": "Auditorium",
+      "category": "facility",
+      "description": "Professional theater space with stage, lighting, sound system for performances, assemblies, and special events.",
+      "capacity": 300,
+      "availability": "Available",
+      "features": "Stage, Sound system, Seating for 300",
+      "imageColor": "#a855f7"
+    },
+    {
+      "id": 12,
+      "name": "Soccer Field",
+      "category": "outdoor",
+      "description": "Full-size soccer field with goal posts, spectator seating, and maintained turf for team sports and practice.",
+      "capacity": 50,
+      "availability": "Available",
+      "features": "Goal posts, Bleachers, Maintained turf",
+      "imageColor": "#22c55e"
+    },
+    {
+      "id": 13,
+      "name": "Innovation Hub",
+      "category": "technology",
+      "description": "Collaborative workspace with virtual reality equipment, tablets, and interactive displays for project-based learning.",
+      "capacity": 35,
+      "availability": "Available",
+      "features": "VR headsets, Tablets, Collaboration tools",
+      "imageColor": "#06b6d4"
+    },
+    {
+      "id": 14,
+      "name": "Garden & Nature Area",
+      "category": "outdoor",
+      "description": "Educational garden space where students learn about plants, ecosystems, and environmental responsibility through hands-on activities.",
+      "capacity": 25,
+      "availability": "Available",
+      "features": "Raised beds, Composting, Native plants",
+      "imageColor": "#65a30d"
+    },
+    {
+      "id": 15,
+      "name": "Multipurpose Room",
+      "category": "facility",
+      "description": "Flexible space for various activities including PE classes, events, meetings, and after-school programs.",
+      "capacity": 60,
+      "availability": "Available",
+      "features": "Flexible layout, AV equipment, Storage",
+      "imageColor": "#0ea5e9"
+    },
+    {
+      "id": 16,
+      "name": "Reading Corner",
+      "category": "classroom",
+      "description": "Cozy reading space with comfortable seating, diverse book collection, and quiet atmosphere for literacy development.",
+      "capacity": 15,
+      "availability": "Available",
+      "features": "Bean bags, Book collection, Quiet space",
+      "imageColor": "#f472b6"
+    },
+    {
+      "id": 17,
+      "name": "Basketball Court",
+      "category": "outdoor",
+      "description": "Outdoor basketball court with regulation hoops, painted court lines, and LED lighting for extended play hours.",
+      "capacity": 30,
+      "availability": "Available",
+      "features": "2 hoops, Court markings, LED lights",
+      "imageColor": "#fb923c"
+    },
+    {
+      "id": 18,
+      "name": "STEAM Lab",
+      "category": "technology",
+      "description": "Integrated Science, Technology, Engineering, Arts, and Mathematics lab promoting interdisciplinary learning and problem-solving.",
+      "capacity": 28,
+      "availability": "Available",
+      "features": "Maker supplies, Tech tools, Project space",
+      "imageColor": "#8b5cf6"
+    }
+  ]
+}

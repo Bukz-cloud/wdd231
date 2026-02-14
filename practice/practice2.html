@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My portfolio website showcasing web development certificate courses and projects">
+    <meta name="author" content="Olubukade John Adesanmi">
+    <link rel="stylesheet" href="./styles/finalproject.css">
+    <link rel="stylesheet" href="./styles/finalproject-large.css">
+    <script src="./scripts/finalproject.js" defer></script>
+    <title>Home - ABY Elementary School</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Homepage - ABY Elementary School">
+    <meta property="og:description" content="Completed course indicated, The list of already completed Web and Computer Programming courses are indicated which are required for the aquisition of certificate 1.">
+    <meta property="og:image" content="https://bukz-cloud.github.io/wdd231/index.html">
+    <meta property="og:url" content="https://bukz-cloud.github.io/wdd231/index.html">
+</head>
+<body>
+    <!-- Top Navbar (Always visible) -->
+    <nav class="top-navbar">
+        <div class="top-navbar-content">            
+            <a href="#locations">School Locations Map</a>
+            <a href="#contact">Contact Us</a>
+            <div class="social-icons">
+                <a href="#facebook"><img src="./images/facebook.jpg" alt="Facebook Icon" class="social-icon"></a>
+                <a href="#twitter"><img src="./images/tweeter-logo.avif" alt="X Icon" class="social-icon"></a>
+                <a href="#youtube"><img src="./images/youtube.png" alt="Youtube Icon" class="social-icon"></a>
+            </div>
+            <div class="language-selector">🌐 Language</div>
+        </div>
+    </nav>
+
+    <!-- Main Navbar (Gets white background on scroll) -->
+    <nav class="main-navbar" id="mainNav">
+        <div class="main-navbar-content">
+            <div class="logo-section">
+                <img src="./images/logo.png" alt="Website Logo" class="logo">
+                <div class="school-name">
+                    <h1>ABY</h1>
+                    <p>Elementary School</p>
+                </div>
+            </div>
+            <div class="main-nav-links">
+                <a href="#resources">Family/Student Resources</a>
+                <a href="#news">News</a>
+                <a href="#enroll" class="enroll-btn">ENROLL NOW</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-links">
+                <a href="#resources">Family/Student Resources</a>
+                <a href="#news">News</a>
+                <a href="#enroll" class="mobile-enroll-btn">ENROLL NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="./images/hero-home.webp" alt="Hero Image">
+            <h2>Learning for lifetime</h2>
+            <h3>- Committed to the Future -</h3>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <div class="quick-links">
+        <div class="quick-links-grid">
+            <a href="#bell" class="quick-link mint">
+                <span class="quick-link-icon">🔔</span>
+                <h3>Bell Schedule</h3>
+            </a>
+            <a href="#handbook" class="quick-link yellow">
+                <span class="quick-link-icon">📚</span>
+                <h3>Handbook</h3>
+            </a>
+            <a href="#powerschool" class="quick-link sage">
+                <span class="quick-link-icon">🏫</span>
+                <h3>PowerSchool</h3>
+            </a>
+            <a href="#menus" class="quick-link lavender">
+                <span class="quick-link-icon">🍽️</span>
+                <h3>Menus</h3>
+            </a>
+            <a href="#calendar" class="quick-link peach">
+                <span class="quick-link-icon">📅</span>
+                <h3>Calendar</h3>
+            </a>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Welcome to Evergreen Elementary</h2>
+            <p>
+                At Evergreen Elementary, we nurture young minds through innovative learning experiences 
+                and a supportive community. Our dedicated educators create an environment where every 
+                child can flourish academically, socially, and emotionally.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
