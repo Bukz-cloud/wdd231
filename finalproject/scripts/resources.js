@@ -79,7 +79,7 @@ function createResourceCard(resource) {
     return `
         <div class="resource-card" data-id="${resource.id}" data-category="${resource.category}">
             <div class="resource-image" style="background: ${resource.imageColor}">
-                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; opacity: 0.3;">
+                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 4rem; opacity: 1;">
                     ${getCategoryIcon(resource.category)}
                 </div>
             </div>
