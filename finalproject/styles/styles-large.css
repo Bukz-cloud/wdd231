@@ -10,7 +10,7 @@
     --secondary-color: #f39c06;
     --text-dark: #000;
     --text-light: #ffffff;
-    --bg-light: #f9fafb;
+    --bg-light: #ffffff;
     --white: #ffffff;
     --success: #34f2b3;
     --error: #ef4444;
@@ -197,7 +197,7 @@ header {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #111827;  /* Very dark, almost black - good contrast */
+    color: #000;  /* Very dark, almost black - good contrast */
     font-weight: 700;
 }
 
@@ -230,19 +230,19 @@ header {
 .about-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #1f2937;  /* Dark gray - good contrast on white */
+    color: #000000;  /* Dark gray - good contrast on white */
     font-weight: 700;
 }
 
 .about-card p {
-    color: #374151;  /* Dark gray for body text - good contrast */
+    color: #000000;  /* Dark gray for body text - good contrast */
     line-height: 1.6;
     font-size: 1rem;
 }
 /* Contact Section */
 .contact-section {
     padding: 4rem 0;
-    background-color: var(--bg-light);
+    background-color: #ffffff;
 }
 
 .contact-section h2 {
@@ -254,7 +254,7 @@ header {
 
 .section-description {
     text-align: center;
-    color: #4b5563;  /* Darker gray for better contrast */
+    color: #000000;
     margin-bottom: 3rem;
     font-size: 1.1rem;
     font-weight: 500;
@@ -263,7 +263,7 @@ header {
 .contact-form {
     max-width: 800px;
     margin: 0 auto;
-    background: var(--white);
+    background: var#ffffff;
     padding: 2.5rem;
     border-radius: 10px;
     box-shadow: var(--shadow-lg);
@@ -286,7 +286,7 @@ header {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 700;  /* Bolder */
-    color: var(--text-dark);  /* Ensure dark color */
+    color: #000000;  /* Ensure dark color */
     font-size: 0.95rem;
 }
 
@@ -307,7 +307,7 @@ header {
 .form-group input::placeholder,
 .form-group select::placeholder,
 .form-group textarea::placeholder {
-    color: #6b7280;  /* Darker placeholder text */
+    color: #000000;  /* Darker placeholder text */
     opacity: 1;
 }
 
@@ -348,7 +348,7 @@ header {
 }
 
 .submit-button:hover {
-    background-color: #1d4ed8;
+    background-color: #031957;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -370,14 +370,14 @@ header {
 .form-message.success {
     display: block;
     background-color: #d1fae5;
-    color: #065f46;
+    color: #033023;
     border-color: #10b981;
 }
 
 .form-message.error {
     display: block;
-    background-color: #fee2e2;
-    color: #991b1b;
+    background-color: #faf3f3;
+    color: #6c1212;
     border-color: #ef4444;
 }
 /* Page Header */
