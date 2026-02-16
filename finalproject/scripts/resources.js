@@ -12,7 +12,7 @@ async function fetchResources() {
         // Show loading state
         showLoading(true);
 
-        const response = await fetch('../data/resources.json');
+        const response = await fetch('./data/resources.json');
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
